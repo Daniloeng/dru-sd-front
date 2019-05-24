@@ -7,7 +7,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>consulta</ion-title>
+
+      <ion-buttons start>
+          <button ion-button (click)="doClickConsulta()">
+            <ion-icon name="contact"></ion-icon>
+          </button>
+        </ion-buttons>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+          Consulta
+        </ion-title>
+        <ion-buttons end>
+          <button ion-button (click)="doClickAbout()">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+
+
   </ion-navbar>
 
 </ion-header>

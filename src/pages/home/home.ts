@@ -5,6 +5,7 @@ import { CookieService } from 'angular2-cookie/core';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ConsultaPage } from './../consulta/consulta';
+import { AboutPage } from './../about/about';
 
 @Component({
   selector: 'page-home',
@@ -26,5 +27,13 @@ export class HomePage {
   pushPage() {
     this.navCtrl.setRoot(ConsultaPage);
   }
+
+  doClickConsulta() {
+    this.navCtrl.setRoot(ConsultaPage);
+  }  
+
+  doClickAbout() {
+    this.navCtrl.setRoot(AboutPage);
+  } 
 
 }
