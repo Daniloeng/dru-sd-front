@@ -5,6 +5,7 @@ import { CookieService } from 'angular2-cookie/core';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ConsultaPage } from './../consulta/consulta';
+import { PerfilPage } from './../perfil/perfil';
 import { AboutPage } from './../about/about';
 
 @Component({
@@ -21,7 +22,7 @@ export class HomePage {
     this.cookieService.removeAll();
     this.requestOptions.headers.set('Authorization', "Bearer ");
     this.navCtrl.setRoot(LoginPage);
-    
+
   }
 
   pushPage() {
@@ -30,10 +31,14 @@ export class HomePage {
 
   doClickConsulta() {
     this.navCtrl.setRoot(ConsultaPage);
-  }  
+  }
+
+  doClickPerfil() {
+    this.navCtrl.setRoot(PerfilPage);
+  }
 
   doClickAbout() {
     this.navCtrl.setRoot(AboutPage);
-  } 
+  }
 
 }
