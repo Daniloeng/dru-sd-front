@@ -25203,23 +25203,23 @@ ion-navbar.toolbar {
   }
 }
 
-page-perfil .user-photo ion-avatar {
+page-consulta .user-photo ion-avatar {
   margin: 0 auto;
   width: 120px;
   height: 120px;
 }
 
-page-perfil ion-list {
+page-consulta ion-list {
   margin-top: 24px;
 }
 
-page-perfil ion-list p {
+page-consulta ion-list p {
   font-size: 12px;
   font-weight: 400;
   padding-bottom: 4px;
 }
 
-page-perfil ion-list h2 {
+page-consulta ion-list h2 {
   font-weight: 400;
   opacity: .5;
 }
