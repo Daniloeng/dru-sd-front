@@ -16,6 +16,7 @@ export class PerfilServiceProvider {
     }
 
     public getPerfis() {
+        console.log((this.perfilUrl));
         return this.http.get(this.perfilUrl);
     }
 
