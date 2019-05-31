@@ -20,13 +20,13 @@ export class InterceptorHttpService implements HttpInterceptor {
         Observable<HttpSentEvent | HttpHeaderResponse |
         HttpProgressEvent | HttpResponse<any> | HttpUserEvent<any>> {
         return next.handle(
-            req.clone({
+            req.clone({                
                 setHeaders:
-                    { Authorization: 'Bearer ' + this.cookieService.get("accessToken") }
+                    { Authorization: 'Bearer ' + this.cookieService.get("accessToken") }                        
             })).catch(error => {
                 if (error instanceof HttpErrorResponse) {
                     switch ((<HttpErrorResponse>error).status) {
-                        case 401:
+                        case 401:                            
                             return this.getAccessToken(req, next);
                         case 0:
                             return this.getAccessToken(req, next);    
@@ -44,6 +44,7 @@ export class InterceptorHttpService implements HttpInterceptor {
         return this.loginService.getAccessToken(this.cookieService.get("refreshToken")).switchMap(
             resp => {
                 this.cookieService.put("accessToken", resp.access_token);
+                console.log("Autorizado:" + resp.access_token);
                 return next.handle(req.clone({
                     setHeaders:
                         { Authorization: 'Bearer ' + this.cookieService.get("accessToken") }

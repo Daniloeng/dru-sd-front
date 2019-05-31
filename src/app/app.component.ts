@@ -7,6 +7,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { ConsultaPage } from './../pages/consulta/consulta';
+import { HomePage } from '../pages/home/home';
+import { PerfilPage } from '../pages/perfil/perfil';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -15,13 +19,23 @@ export class ComponentInicial {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = LoginPage;
 
+  pages: Array<{ title: string, component: any }>;
+
   constructor(
-    platform: Platform,
-    statusBar: StatusBar,
-    splashScreen: SplashScreen,
-    public requestOptions:RequestOptions,
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public requestOptions: RequestOptions,
     private cookieService: CookieService
   ) {
+
+    this.initializeApp() 
+    
+    this.pages = [
+      { title: 'Home', component: HomePage },
+      { title: 'Consulta', component: ConsultaPage },
+      { title: 'Perfil', component: PerfilPage }
+    ];
 
 
     if (this.cookieService.getObject("usuarioAtual")) {
@@ -30,10 +44,18 @@ export class ComponentInicial {
     } else {
       this.rootPage = LoginPage;
     }
+    
 
-    platform.ready().then(() => {
-      statusBar.styleDefault();
-      splashScreen.hide();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
     });
+  }
+
+  openPage(page) {
+    this.nav.setRoot(page.component);
   }
 }
