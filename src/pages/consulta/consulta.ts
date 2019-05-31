@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { DruServiceProvider } from './../../providers/dru-service/dru-service';
 import { TabsPage } from './../tabs/tabs';
 import { RequestOptions } from '@angular/http';
 import { LoginServiceProvider } from './../../providers/login-service/login-service';
@@ -22,6 +22,8 @@ import { CookieService } from 'angular2-cookie/core';
 })
 export class ConsultaPage {
 
+  hasInfo: boolean = false;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -30,11 +32,19 @@ export class ConsultaPage {
     private loginService: LoginServiceProvider,
     private cookieService: CookieService,
     private requestOptions: RequestOptions,
+    private druService: DruServiceProvider,
 ) {
-  
+
 }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConsultaPage');
   }
+
+  getInfo(){
+  console.log('Click');
+  this.hasInfo = true;
+  console.log(this.druService.getDRU());
+}
+
 
 }
