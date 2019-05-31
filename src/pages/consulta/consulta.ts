@@ -37,4 +37,8 @@ export class ConsultaPage {
     console.log('ionViewDidLoad ConsultaPage');
   }
 
+  doClickContact() {
+    this.navCtrl.setRoot(ContactPage);
+  }
+
 }

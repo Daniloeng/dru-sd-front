@@ -13,12 +13,14 @@ import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ConsultaPage } from '../pages/consulta/consulta';
+import { ContactPage } from '../pages/contact/contact';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginServiceProvider } from '../providers/login-service/login-service';
 import { XHRBackend, RequestOptions } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 
 
@@ -29,7 +31,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     PerfilPage,
     HomePage,
     TabsPage,
-    ConsultaPage
+    ConsultaPage,
+    ContactPage
 
   ],
   imports: [
@@ -46,7 +49,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     PerfilPage,
     HomePage,
     TabsPage,
-    ConsultaPage
+    ConsultaPage,
+    ContactPage
 
   ],
   providers: [
