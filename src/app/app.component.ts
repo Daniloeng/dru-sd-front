@@ -1,3 +1,5 @@
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 import { RequestOptions } from '@angular/http';
 import { CookieService } from 'angular2-cookie/core';
 import { LoginPage } from './../pages/login/login';
@@ -10,6 +12,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ConsultaPage } from './../pages/consulta/consulta';
 import { HomePage } from '../pages/home/home';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 
 
 @Component({
@@ -33,8 +37,11 @@ export class ComponentInicial {
     
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Consulta', component: ConsultaPage },
-      { title: 'Perfil', component: PerfilPage }
+      { title: 'Consultar DRU', component: ConsultaPage },
+      { title: 'Alterar DRU', component: ConsultaPage },
+      { title: 'Solicitar Liberação de DRU', component: ConsultaPage },
+      { title: 'Liberar Consulta de DRU', component: ConsultaPage },
+      { title: 'Perfis de Usuário', component: PerfilPage }
     ];
 
 
@@ -58,4 +65,6 @@ export class ComponentInicial {
   openPage(page) {
     this.nav.setRoot(page.component);
   }
+
+  
 }

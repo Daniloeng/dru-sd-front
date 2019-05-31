@@ -7,6 +7,7 @@ import { NavController } from 'ionic-angular';
 import { ConsultaPage } from './../consulta/consulta';
 import { PerfilPage } from './../perfil/perfil';
 import { AboutPage } from './../about/about';
+import { ContactPage } from './../contact/contact';
 
 @Component({
   selector: 'page-home',
@@ -39,6 +40,10 @@ export class HomePage {
 
   doClickAbout() {
     this.navCtrl.setRoot(AboutPage);
+  }
+
+  doClickContact() {
+    this.navCtrl.setRoot(ContactPage);
   }
 
 }
