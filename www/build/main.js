@@ -1,75 +1,6 @@
 webpackJsonp([1],{
 
-<<<<<<< HEAD
-/***/ 110:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsultaPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the ConsultaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ConsultaPage = (function () {
-    function ConsultaPage(navCtrl, navParams, formBuilder, nav, loginService, cookieService, requestOptions) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.formBuilder = formBuilder;
-        this.nav = nav;
-        this.loginService = loginService;
-        this.cookieService = cookieService;
-        this.requestOptions = requestOptions;
-    }
-    ConsultaPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ConsultaPage');
-    };
-    return ConsultaPage;
-}());
-ConsultaPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-consulta',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/'<!--\n\n  Generated template for the ConsultaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Consulta\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div class="user-photo" padding-top>\n\n    <ion-avatar>\n\n      <img [src]="\'/assets/images/noavatar.png\'">\n\n    </ion-avatar>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Informções Principais</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="person" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="cpf" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>CPF</p>\n\n          <h2>123.456.789-00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="nasc" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Data de Nascimento</p>\n\n          <h2>00/00/00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Contato</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Email</p>\n\n          <h2>email@email.com</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Telefone</p>\n\n          <h2>(00)1234-5678</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Afiliação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome da mãe</p>\n\n          <h2>nome nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome do pai</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Documentação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Título de Eleitor</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Passaporte</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro SUS</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro Geral</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__["a" /* LoginServiceProvider */],
-        __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__["CookieService"],
-        __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]])
-], ConsultaPage);
-
-//# sourceMappingURL=consulta.js.map
-
-/***/ }),
-
-/***/ 119:
-=======
 /***/ 120:
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -152,77 +83,6 @@ LoginPageModule = __decorate([
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 166:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__consulta_consulta__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__perfil_perfil__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about__ = __webpack_require__(87);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, cookieService, requestOptions) {
-        this.navCtrl = navCtrl;
-        this.cookieService = cookieService;
-        this.requestOptions = requestOptions;
-    }
-    HomePage.prototype.logout = function () {
-        this.cookieService.removeAll();
-        this.requestOptions.headers.set('Authorization', "Bearer ");
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_1__login_login__["a" /* LoginPage */]);
-    };
-    HomePage.prototype.pushPage = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__consulta_consulta__["a" /* ConsultaPage */]);
-    };
-    HomePage.prototype.doClickConsulta = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__consulta_consulta__["a" /* ConsultaPage */]);
-    };
-    HomePage.prototype.doClickPerfil = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__perfil_perfil__["a" /* PerfilPage */]);
-    };
-    HomePage.prototype.doClickAbout = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_7__about_about__["a" /* AboutPage */]);
-    };
-    return HomePage;
-}());
-HomePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-        selector: 'page-home',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Home\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n  </ion-navbar>\n\n\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n\n\n<ion-content padding>\n\n  <h2>Seja bem vindo ao Projeto DRU de SD 2019!</h2>\n\n  <p>\n\n    Aqui é sua tela inicial.\n\n  </p>\n\n  <button ion-button color="primary" (click)="pushPage()">Consulta</button>\n\n\n\n  <button ion-button color="secondary" (click)="pushPage()">Alterar</button>\n\n\n\n  <button ion-button color="danger" (click)="logout()">Sair</button>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\home\home.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__["CookieService"],
-        __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]])
-], HomePage);
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-=======
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
 /***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -375,10 +235,9 @@ var PerfilServiceProvider = (function () {
 }());
 PerfilServiceProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */]])
 ], PerfilServiceProvider);
 
-var _a;
 //# sourceMappingURL=perfil-service.js.map
 
 /***/ }),
@@ -465,10 +324,9 @@ var InterceptorHttpService = (function () {
 }());
 InterceptorHttpService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__["CookieService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__["CookieService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__login_service_login_service__["a" /* LoginServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__login_service_login_service__["a" /* LoginServiceProvider */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__["CookieService"], __WEBPACK_IMPORTED_MODULE_0__login_service_login_service__["a" /* LoginServiceProvider */]])
 ], InterceptorHttpService);
 
-var _a, _b;
 //# sourceMappingURL=InterceptorHttpService.js.map
 
 /***/ }),
@@ -549,11 +407,7 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* Nav */])
 ], ComponentInicial.prototype, "nav", void 0);
 ComponentInicial = __decorate([
-<<<<<<< HEAD
-    Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\app\app.html"*/'<ion-menu [content]="content">\n\n\n\n    <ion-content padding>\n\n    \n\n        <h4>Itens de Menu (App.html)</h4>\n\n\n\n        <ion-title>\n\n                https://ionicframework.com/docs/api/menu\n\n        </ion-title>\n\n        \n\n    \n\n    </ion-content>\n\n    \n\n    </ion-menu>\n\n\n\n\n\n<ion-nav [root]="rootPage" #content></ion-nav>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\app\app.html"*/
-=======
-    Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-header>\n\n        <ion-toolbar>\n\n            <ion-title>DRU</ion-title>\n\n        </ion-toolbar>\n\n    </ion-header>\n\n\n\n    <ion-content>\n\n        <ion-list>\n\n            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n                {{p.title}}\n\n            </button>\n\n        </ion-list>\n\n    </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\app\app.html"*/
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
+    Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-header>\n\n        <ion-toolbar>\n\n            <ion-title>DRU</ion-title>\n\n        </ion-toolbar>\n\n    </ion-header>\n\n\n\n    <ion-content>\n\n        <ion-list>\n\n            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n                {{p.title}}\n\n            </button>\n\n        </ion-list>\n\n    </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* Platform */],
         __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
@@ -600,7 +454,7 @@ var PerfilPage = (function () {
 }());
 PerfilPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-        selector: 'perfil-page',template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\pages\perfil\perfil.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n\n\n\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="user-photo" padding-top>\n\n    <ion-avatar>\n\n      <img [src]="\'/assets/images/noavatar.png\'">\n\n    </ion-avatar>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Informções Principais</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="person" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="cpf" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>CPF</p>\n\n          <h2>123.456.789-00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="nasc" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Data de Nascimento</p>\n\n          <h2>00/00/00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Contato</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Email</p>\n\n          <h2>email@email.com</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Telefone</p>\n\n          <h2>(00)1234-5678</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Afiliação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome da mãe</p>\n\n          <h2>nome nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome do pai</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Documentação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Título de Eleitor</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Passaporte</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro SUS</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro Geral</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\pages\perfil\perfil.html"*/,
+        selector: 'perfil-page',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\perfil\perfil.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n\n\n\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Perfis</ion-list-header>\n\n    <ion-item *ngFor="let perfil of perfis">\n\n      <ion-icon name="ionic" item-left></ion-icon>\n\n      {{perfil.nome}}\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\perfil\perfil.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_0__providers_perfil_service_perfil_service__["a" /* PerfilServiceProvider */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__providers_perfil_service_perfil_service__["a" /* PerfilServiceProvider */]])
@@ -731,16 +585,9 @@ var ConsultaPage = (function () {
     };
     return ConsultaPage;
 }());
-<<<<<<< HEAD
-PerfilPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-        selector: 'perfil-page',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\perfil\perfil.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n\n\n\n\n    <ion-title>\n\n      Perfil\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Perfis</ion-list-header>\n\n    <ion-item *ngFor="let perfil of perfis">\n\n      <ion-icon name="ionic" item-left></ion-icon>\n\n      {{perfil.nome}}\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\perfil\perfil.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_0__providers_perfil_service_perfil_service__["a" /* PerfilServiceProvider */]]
-=======
 ConsultaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-consulta',template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\pages\consulta\consulta.html"*/'<!--\n\n  Generated template for the ConsultaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Consulta\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\pages\consulta\consulta.html"*/,
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
+        selector: 'page-consulta',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/'<!--\n\n  Generated template for the ConsultaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Consulta\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div class="user-photo" padding-top>\n\n    <ion-avatar>\n\n      <img [src]="\'/assets/images/noavatar.png\'">\n\n    </ion-avatar>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Informções Principais</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="person" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="cpf" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>CPF</p>\n\n          <h2>123.456.789-00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="nasc" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Data de Nascimento</p>\n\n          <h2>00/00/00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Contato</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Email</p>\n\n          <h2>email@email.com</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Telefone</p>\n\n          <h2>(00)1234-5678</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Afiliação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome da mãe</p>\n\n          <h2>nome nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome do pai</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Documentação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Título de Eleitor</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Passaporte</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro SUS</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro Geral</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -765,8 +612,8 @@ var Utils = (function () {
     }
     Utils.getUrlBackend = function () {
         //return "http://localhost:8080/";
-        //return "https://dru-server.herokuapp.com/";
-        return "/api/";
+        return "https://dru-server.herokuapp.com/";
+        //return "/api/"
     };
     return Utils;
 }());
@@ -853,11 +700,7 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-<<<<<<< HEAD
         selector: 'page-login',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\login\login.html"*/'<ion-content id="login">\n\n  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n    <div class="row responsive-md">\n\n      <div class="col col-50 col-offset-25">\n\n\n\n        <ion-item>\n\n          <ion-label stacked>Email</ion-label>\n\n          <ion-input #email formControlName="email" type="email" placeholder="Seu email" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n\n        </ion-item>\n\n        <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n\n          <p>Por favor coloque um email válido.</p>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked>Senha</ion-label>\n\n          <ion-input #password formControlName="senha" type="password" placeholder="Sua senha" [class.invalid]="!loginForm.controls.senha.valid && loginForm.controls.senha.dirty"></ion-input>\n\n        </ion-item>\n\n        <ion-item class="error-message" *ngIf="!loginForm.controls.senha.valid  && loginForm.controls.senha.dirty">\n\n          <p>Sua senha precisa conter pelo menos 6 caracteres</p>\n\n        </ion-item>\n\n\n\n        <button ion-button block type="submit">\n\n        Login\n\n      </button>\n\n        <button ion-button block clear (click)="goToSignup()">\n\n        <!--Criar uma nova conta  -->\n\n      </button>\n\n\n\n      </div>\n\n    </div>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\login\login.html"*/
-=======
-        selector: 'page-login',template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\pages\login\login.html"*/'<ion-content id="login">\n\n  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n    <div class="row responsive-md">\n\n      <div class="col col-50 col-offset-25">\n\n\n\n        <ion-item>\n\n          <ion-label stacked>Email</ion-label>\n\n          <ion-input #email formControlName="email" type="email" placeholder="Seu email" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n\n        </ion-item>\n\n        <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n\n          <p>Por favor coloque um email válido.</p>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked>Senha</ion-label>\n\n          <ion-input #password formControlName="senha" type="password" placeholder="Sua senha" [class.invalid]="!loginForm.controls.senha.valid && loginForm.controls.senha.dirty"></ion-input>\n\n        </ion-item>\n\n        <ion-item class="error-message" *ngIf="!loginForm.controls.senha.valid  && loginForm.controls.senha.dirty">\n\n          <p>Sua senha precisa conter pelo menos 6 caracteres</p>\n\n        </ion-item>\n\n\n\n        <button ion-button block type="submit">\n\n        Login\n\n      </button>\n\n        <button ion-button block clear (click)="goToSignup()">\n\n        <!--Criar uma nova conta  -->\n\n      </button>\n\n\n\n      </div>\n\n    </div>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\pages\login\login.html"*/
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* NavParams */],
@@ -903,11 +746,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-<<<<<<< HEAD
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <!-->ion-tab [root]="tab3Root" tabTitle="Perfil" tabIcon="contacts"></ion-tab-->\n\n</ion-tabs>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\tabs\tabs.html"*/
-=======
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <!-->ion-tab [root]="tab3Root" tabTitle="Perfil" tabIcon="contacts"></ion-tab-->\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\pages\tabs\tabs.html"*/
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -942,11 +781,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
         selector: 'page-about',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    Esse é o projeto denominado "Documento de Registro Único (DRU) da disciplina de Sistemas Distruídos pela UNIFESP.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\about\about.html"*/
-=======
-        selector: 'page-about',template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    Esse é o projeto denominado "Documento de Registro Único (DRU) da disciplina de Sistemas Distruídos pela UNIFESP.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\pages\about\about.html"*/
->>>>>>> a0d01593d93383b19ff6bedadbacdabeec6c6084
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], AboutPage);
@@ -1013,7 +848,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\mestrado\dru-sd-front\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickPerfil()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Home\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n  </ion-navbar>\n\n\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n\n\n<ion-content padding>\n\n  <h2>Seja bem vindo ao Projeto DRU de SD 2019!</h2>\n\n  <p>\n\n    Aqui é sua tela inicial.\n\n  </p>\n\n  <button ion-button color="primary" (click)="pushPage()">Consulta</button>\n\n\n\n  <button ion-button color="secondary" (click)="pushPage()">Alterar</button>\n\n\n\n  <button ion-button color="danger" (click)="logout()">Sair</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\mestrado\dru-sd-front\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Home\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n  </ion-navbar>\n\n\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n\n\n<ion-content padding>\n\n  <h2>Seja bem vindo ao Projeto DRU de SD 2019!</h2>\n\n  <p>\n\n    Aqui é sua tela inicial.\n\n  </p>\n\n  <button ion-button color="primary" (click)="pushPage()">Consulta</button>\n\n\n\n  <button ion-button color="secondary" (click)="pushPage()">Alterar</button>\n\n\n\n  <button ion-button color="danger" (click)="logout()">Sair</button>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__["CookieService"],
         __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]])

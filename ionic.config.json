@@ -2,12 +2,10 @@
   "name": "ionicDRU",
   "integrations": {},
   "type": "ionic-angular",
-  "app_id": "",
   "proxies": [
     {
       "path": "/api",
       "proxyUrl": "https://dru-server.herokuapp.com/"
     }
   ]
-  
 }
