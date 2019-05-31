@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DruServiceProvider } from './../../providers/dru-service/dru-service';
-import { TabsPage } from './../tabs/tabs';
-import { RequestOptions } from '@angular/http';
-import { LoginServiceProvider } from './../../providers/login-service/login-service';
-import { HomePage } from './../home/home';
-import { FormBuilder } from '@angular/forms';
-import { CookieService } from 'angular2-cookie/core';
 
 /**
  * Generated class for the ConsultaPage page.
@@ -19,32 +13,27 @@ import { CookieService } from 'angular2-cookie/core';
 @Component({
   selector: 'page-consulta',
   templateUrl: 'consulta.html',
+  providers: [DruServiceProvider]
 })
 export class ConsultaPage {
 
-  hasInfo: boolean = false;
+  public hasInfo: boolean = false;
+  public drus: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public formBuilder: FormBuilder,
-    public nav: NavController,
-    private loginService: LoginServiceProvider,
-    private cookieService: CookieService,
-    private requestOptions: RequestOptions,
-    private druService: DruServiceProvider,
-) {
+  constructor( public navCtrl: NavController, public druService: DruServiceProvider) {
 
-}
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ConsultaPage');
   }
 
   getInfo(){
-  console.log('Click');
-  this.hasInfo = true;
-  console.log(this.druService.getDRU());
-}
+    this.drus = []
+    this.druService.getDRU(this.cpf).subscribe(
+      response => { this.drus = response;     this.hasInfo = true;});
+    console.log(this.drus)
+  }
+
+
+
+
 
 
 }

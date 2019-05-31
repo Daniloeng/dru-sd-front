@@ -26,7 +26,7 @@ var map = {
 		0
 	],
 	"../pages/login/login.module": [
-		167
+		165
 	]
 };
 function webpackAsyncContext(req) {
@@ -50,10 +50,10 @@ module.exports = webpackAsyncContext;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DruServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__entity_Utils__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -68,33 +68,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/*
-  Generated class for the DruServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 var DruServiceProvider = (function () {
     function DruServiceProvider(http) {
         this.http = http;
-        this.druUrl = __WEBPACK_IMPORTED_MODULE_1__entity_Utils__["a" /* Utils */].getUrlBackend() + "dru";
+        this.druUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "dru/";
     }
-    DruServiceProvider.prototype.getDRU = function () {
-        return this.http.get(this.druUrl, [])
-            .map(function (res) { return res.json(); });
+    DruServiceProvider.prototype.getDRU = function (cpf) {
+        console.log('Buscando por ' + cpf + 'em ' + this.druUrl);
+        return this.http.get(this.druUrl);
     };
     return DruServiceProvider;
 }());
 DruServiceProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], DruServiceProvider);
 
+var _a;
 //# sourceMappingURL=dru-service.js.map
 
 /***/ }),
 
-/***/ 167:
+/***/ 165:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102,7 +97,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -153,23 +148,23 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_perfil_perfil__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_InterceptorHttpService__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__entity_Utils__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login_module__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login_module__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_consulta_consulta__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_consulta_consulta__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_status_bar__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_login_service_login_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_common_http__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_login_service_login_service__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_common_http__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_dru_service_dru_service__ = __webpack_require__(164);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -258,8 +253,8 @@ AppModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PerfilServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -299,11 +294,11 @@ PerfilServiceProvider = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InterceptorHttpService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_service_login_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_service_login_service__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(276);
@@ -388,17 +383,17 @@ InterceptorHttpService = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentInicial; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_login_login__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_login_login__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_consulta_consulta__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_consulta_consulta__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_perfil_perfil__ = __webpack_require__(45);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -536,80 +531,7 @@ var Utils = (function () {
 
 /***/ }),
 
-/***/ 52:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/*
-  Generated class for the LoginServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var LoginServiceProvider = (function () {
-    function LoginServiceProvider(http, requestOptions) {
-        this.http = http;
-        this.requestOptions = requestOptions;
-        this.loginUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "oauth/token?grant_type=password&username=";
-        this.refreshUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "oauth/token?grant_type=refresh_token&refresh_token=";
-        this.userUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "usuario/logado";
-    }
-    LoginServiceProvider.prototype.login = function (usuario) {
-        this.loginUrl + usuario.email + "&password=" + encodeURIComponent(usuario.senha);
-        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({
-            "Authorization": "Basic " + btoa("cliente" + ':' + "123")
-        });
-        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post(this.loginUrl + usuario.email + "&password=" +
-            encodeURIComponent(usuario.senha), {}, options)
-            .map(function (res) { return res.json(); });
-    };
-    LoginServiceProvider.prototype.getUsuarioAtual = function (token) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({ 'Authorization': "Bearer " + token });
-        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        this.requestOptions.headers.set('Authorization', "Bearer " + token);
-        return this.http.get(this.userUrl, options)
-            .map(function (res) { return res.json(); });
-    };
-    LoginServiceProvider.prototype.getAccessToken = function (refreshToken) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({
-            "Authorization": "Basic " + btoa("cliente" + ':' + "123")
-        });
-        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post(this.refreshUrl + refreshToken, {}, options)
-            .map(function (res) { return res.json(); });
-    };
-    return LoginServiceProvider;
-}());
-LoginServiceProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]])
-], LoginServiceProvider);
-
-//# sourceMappingURL=login-service.js.map
-
-/***/ }),
-
-/***/ 57:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -617,11 +539,6 @@ LoginServiceProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_dru_service_dru_service__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_login_service_login_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -631,10 +548,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
 
 
 
@@ -645,57 +558,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var ConsultaPage = (function () {
-    function ConsultaPage(navCtrl, navParams, formBuilder, nav, loginService, cookieService, requestOptions, druService) {
+    function ConsultaPage(navCtrl, druService) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.formBuilder = formBuilder;
-        this.nav = nav;
-        this.loginService = loginService;
-        this.cookieService = cookieService;
-        this.requestOptions = requestOptions;
         this.druService = druService;
         this.hasInfo = false;
     }
-    ConsultaPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ConsultaPage');
-    };
     ConsultaPage.prototype.getInfo = function () {
-        console.log('Click');
-        this.hasInfo = true;
-        console.log(this.druService.getDRU());
+        var _this = this;
+        this.drus = [];
+        this.druService.getDRU(this.cpf).subscribe(function (response) { _this.drus = response; _this.hasInfo = true; });
+        console.log(this.drus);
     };
     return ConsultaPage;
 }());
 ConsultaPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-consulta',template:/*ion-inline-start:"C:\Users\Renan Ruan\Documents\GitHub\dru-sd-front\src\pages\consulta\consulta.html"*/'<!--\n\n  Generated template for the ConsultaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Consulta\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div *ngIf="!hasInfo">\n\n    <ion-item>\n\n      <ion-label position="floating">Buscar</ion-label>\n\n      <ion-input placeholder="CPF" ></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <button ion-button block (click)="getInfo()">\n\n      Buscar\n\n      </button>\n\n    </ion-item>\n\n  </div>\n\n  <div *ngIf="hasInfo">\n\n    <div class="user-photo" padding-top>\n\n      <ion-avatar>\n\n        <img [src]="\'/assets/images/noavatar.png\'">\n\n      </ion-avatar>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Informções Principais</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="person" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Nome</p>\n\n            <h2>nome nome</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="cpf" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>CPF</p>\n\n            <h2>123.456.789-00</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="nasc" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Data de Nascimento</p>\n\n            <h2>00/00/00</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Contato</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="mail" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Email</p>\n\n            <h2>email@email.com</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Telefone</p>\n\n            <h2>(00)1234-5678</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Afiliação</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="mail" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Nome da mãe</p>\n\n            <h2>nome nome nome</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Nome do pai</p>\n\n            <h2>nome nome</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Documentação</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="mail" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Título de Eleitor</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Passaporte</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Registro SUS</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Registro Geral</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Renan Ruan\Documents\GitHub\dru-sd-front\src\pages\consulta\consulta.html"*/,
+        selector: 'page-consulta',template:/*ion-inline-start:"C:\Users\Renan Ruan\Documents\GitHub\dru-sd-front\src\pages\consulta\consulta.html"*/'<!--\n\n  Generated template for the ConsultaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickConsulta()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Consulta\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div *ngIf="!hasInfo">\n\n    <ion-item>\n\n      <ion-label position="floating">Buscar</ion-label>\n\n      <ion-input placeholder="CPF" [(ngModel)]="cpf" ></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <button ion-button block (click)="getInfo()">\n\n      Buscar\n\n      </button>\n\n    </ion-item>\n\n  </div>\n\n  <div *ngIf="hasInfo">\n\n    <div class="user-photo" padding-top>\n\n      <ion-avatar>\n\n        <img [src]="\'/assets/images/noavatar.png\'">\n\n      </ion-avatar>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Informções Principais</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item *ngFor="let dru of drus">\n\n          <ion-icon name="person" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Nome</p>\n\n            <h2>{{dru.nome}}</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="cpf" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>CPF</p>\n\n            <h2>123.456.789-00</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="nasc" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Data de Nascimento</p>\n\n            <h2>00/00/00</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Contato</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="mail" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Email</p>\n\n            <h2>email@email.com</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Telefone</p>\n\n            <h2>(00)1234-5678</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Afiliação</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="mail" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Nome da mãe</p>\n\n            <h2>nome nome nome</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Nome do pai</p>\n\n            <h2>nome nome</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n\n\n    <div>\n\n      <ion-label>\n\n        <h2>Documentação</h2>\n\n      </ion-label>\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-icon name="mail" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Título de Eleitor</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Passaporte</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Registro SUS</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-icon name="telef" slot="start"></ion-icon>\n\n          <ion-label>\n\n            <p>Registro Geral</p>\n\n            <h2>1234567890</h2>\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Renan Ruan\Documents\GitHub\dru-sd-front\src\pages\consulta\consulta.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_2__providers_dru_service_dru_service__["a" /* DruServiceProvider */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_login_service_login_service__["a" /* LoginServiceProvider */],
-        __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core__["CookieService"],
-        __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_dru_service_dru_service__["a" /* DruServiceProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_dru_service_dru_service__["a" /* DruServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_dru_service_dru_service__["a" /* DruServiceProvider */]) === "function" && _b || Object])
 ], ConsultaPage);
 
+var _a, _b;
 //# sourceMappingURL=consulta.js.map
 
 /***/ }),
 
-/***/ 87:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tabs_tabs__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_login_service_login_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tabs_tabs__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_login_service_login_service__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_cookie_core__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -777,15 +677,15 @@ LoginPage = __decorate([
 
 /***/ }),
 
-/***/ 88:
+/***/ 87:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__perfil_perfil__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -817,7 +717,7 @@ TabsPage = __decorate([
 
 /***/ }),
 
-/***/ 89:
+/***/ 88:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -852,20 +752,20 @@ AboutPage = __decorate([
 
 /***/ }),
 
-/***/ 90:
+/***/ 89:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__consulta_consulta__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__consulta_consulta__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__perfil_perfil__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -917,6 +817,79 @@ HomePage = __decorate([
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/*
+  Generated class for the LoginServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var LoginServiceProvider = (function () {
+    function LoginServiceProvider(http, requestOptions) {
+        this.http = http;
+        this.requestOptions = requestOptions;
+        this.loginUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "oauth/token?grant_type=password&username=";
+        this.refreshUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "oauth/token?grant_type=refresh_token&refresh_token=";
+        this.userUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "usuario/logado";
+    }
+    LoginServiceProvider.prototype.login = function (usuario) {
+        this.loginUrl + usuario.email + "&password=" + encodeURIComponent(usuario.senha);
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({
+            "Authorization": "Basic " + btoa("cliente" + ':' + "123")
+        });
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.loginUrl + usuario.email + "&password=" +
+            encodeURIComponent(usuario.senha), {}, options)
+            .map(function (res) { return res.json(); });
+    };
+    LoginServiceProvider.prototype.getUsuarioAtual = function (token) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({ 'Authorization': "Bearer " + token });
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        this.requestOptions.headers.set('Authorization', "Bearer " + token);
+        return this.http.get(this.userUrl, options)
+            .map(function (res) { return res.json(); });
+    };
+    LoginServiceProvider.prototype.getAccessToken = function (refreshToken) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({
+            "Authorization": "Basic " + btoa("cliente" + ':' + "123")
+        });
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.refreshUrl + refreshToken, {}, options)
+            .map(function (res) { return res.json(); });
+    };
+    return LoginServiceProvider;
+}());
+LoginServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]])
+], LoginServiceProvider);
+
+//# sourceMappingURL=login-service.js.map
 
 /***/ })
 

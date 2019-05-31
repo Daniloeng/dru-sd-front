@@ -35,7 +35,7 @@
   <div *ngIf="!hasInfo">
     <ion-item>
       <ion-label position="floating">Buscar</ion-label>
-      <ion-input placeholder="CPF" ></ion-input>
+      <ion-input placeholder="CPF" [(ngModel)]="cpf" ></ion-input>
     </ion-item>
     <ion-item>
       <button ion-button block (click)="getInfo()">
@@ -55,11 +55,11 @@
         <h2>Informções Principais</h2>
       </ion-label>
       <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let dru of drus">
           <ion-icon name="person" slot="start"></ion-icon>
           <ion-label>
             <p>Nome</p>
-            <h2>nome nome</h2>
+            <h2>{{dru.nome}}</h2>
           </ion-label>
         </ion-item>
         <ion-item>
