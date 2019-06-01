@@ -1,6 +1,12 @@
-node_modules
-www
-
-
+node_modules/
+www/
+*.keystore
+*.sw*
+platforms/
+plugins
+app/bower_components/
+.tmp/
+.DS_Store
+*.log
 
 
