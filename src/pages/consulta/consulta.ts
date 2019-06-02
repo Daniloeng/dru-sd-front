@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { TabsPage } from './../tabs/tabs';
+import { ContactPage } from './../contact/contact';
 import { RequestOptions } from '@angular/http';
 import { LoginServiceProvider } from './../../providers/login-service/login-service';
 import { HomePage } from './../home/home';
@@ -25,6 +26,7 @@ export class ConsultaPage {
 
   public hasInfo: boolean = false;
   public drus: any;
+  public cpf: any;
 
   constructor(
     public navCtrl: NavController,
