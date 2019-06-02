@@ -20,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginServiceProvider } from '../providers/login-service/login-service';
 import { XHRBackend, RequestOptions } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DruServiceProvider } from '../providers/dru-service/dru-service';
 
 
 
@@ -63,7 +64,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     }
     ,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    LoginServiceProvider
+    LoginServiceProvider,
+    DruServiceProvider
   ]
 })
 export class AppModule { }
