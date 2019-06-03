@@ -8,5 +8,6 @@ app/bower_components/
 .tmp/
 .DS_Store
 *.log
-
+www/build/
+.sourcemaps
 
