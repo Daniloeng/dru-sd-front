@@ -20,5 +20,4 @@ export class ConsultaServiceProvider {
         return this.http.get(this.consultaUrl);
     }
 
-
 }

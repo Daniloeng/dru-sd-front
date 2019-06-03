@@ -31,5 +31,4 @@ export class ConsultaPage {
   doClickContact() {
     this.navCtrl.setRoot(ContactPage);
   }  
-
 }
