@@ -1,3 +1,4 @@
+import { ConsultaServiceProvider } from '../../providers/consulta-service/consulta-service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -7,38 +8,28 @@ import { LoginServiceProvider } from './../../providers/login-service/login-serv
 import { HomePage } from './../home/home';
 import { FormBuilder } from '@angular/forms';
 import { CookieService } from 'angular2-cookie/core';
+import { ContactPage } from './../contact/contact';
 
-/**
- * Generated class for the ConsultaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
-  selector: 'page-consulta',
+  selector: 'consulta-page',
   templateUrl: 'consulta.html',
+  providers: [ConsultaServiceProvider]
 })
 export class ConsultaPage {
+  public registros: any;
+  constructor(public navCtrl: NavController, public consultaService: ConsultaServiceProvider) {
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public formBuilder: FormBuilder,
-    public nav: NavController,
-    private loginService: LoginServiceProvider,
-    private cookieService: CookieService,
-    private requestOptions: RequestOptions,
-) {
-  
-}
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ConsultaPage');
+  }
+
+  ionViewWillEnter() {
+    this.registros = [];
+    this.consultaService.getRegistros().subscribe(
+      response => this.registros = response
+    );
   }
 
   doClickContact() {
     this.navCtrl.setRoot(ContactPage);
-  }
+  }  
 
 }

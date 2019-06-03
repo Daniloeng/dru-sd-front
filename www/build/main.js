@@ -1,73 +1,5 @@
 webpackJsonp([2],{
 
-/***/ 112:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__about_about__ = __webpack_require__(89);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-/**
- * Generated class for the ContactPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ContactPage = ContactPage_1 = (function () {
-    function ContactPage(navCtrl, navParams, formBuilder, nav, loginService, cookieService, requestOptions) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.formBuilder = formBuilder;
-        this.nav = nav;
-        this.loginService = loginService;
-        this.cookieService = cookieService;
-        this.requestOptions = requestOptions;
-    }
-    ContactPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ContactPage');
-    };
-    ContactPage.prototype.doClickAbout = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__about_about__["a" /* AboutPage */]);
-    };
-    ContactPage.prototype.doClickContact = function () {
-        this.navCtrl.setRoot(ContactPage_1);
-    };
-    return ContactPage;
-}());
-ContactPage = ContactPage_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-contact',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\contact\contact.html"*/'<!--\n  Generated template for the ContactPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n\n      <ion-buttons start>\n          <button ion-button (click)="doClickContact()">\n            <ion-icon name="contact"></ion-icon>\n          </button>\n        </ion-buttons>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>\n          Contato\n        </ion-title>\n        <ion-buttons end>\n          <button ion-button (click)="doClickAbout()">\n            <ion-icon name="more"></ion-icon>\n          </button>\n        </ion-buttons>\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div>\n    <ion-label>\n      <h2>Informações dos Alunos</h2>\n    </ion-label>\n\n    <ion-list>\n\n        <ion-item>\n            <ion-icon name="name" slot="start"></ion-icon>\n            <ion-label>\n              <p>Nome:</p>\n              <h2>Daniel</h2>\n            </ion-label>\n          </ion-item>\n          <ion-item>\n            <ion-icon name="phone" slot="start"></ion-icon>\n            <ion-label>\n              <p>Whatsapp:</p>\n              <h2>(12)99106-5737</h2>\n            </ion-label>\n          </ion-item>\n          <ion-item>\n            <ion-icon name="mail" slot="start"></ion-icon>\n            <ion-label>\n              <p>Email</p>\n              <h2>danisantosalves@gmail.com</h2>\n            </ion-label>\n          </ion-item>\n\n          <ion-item>\n              <ion-icon name="name" slot="start"></ion-icon>\n              <ion-label>\n                <p>Nome:</p>\n                <h2>Danilo</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="phone" slot="start"></ion-icon>\n              <ion-label>\n                <p>Whatsapp:</p>\n                <h2>(12)98269-1615</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="mail" slot="start"></ion-icon>\n              <ion-label>\n                <p>Email</p>\n                <h2>daniloeng.ribeiro@gmail.com</h2>\n              </ion-label>\n            </ion-item>\n\n      <ion-item>\n        <ion-icon name="name" slot="start"></ion-icon>\n        <ion-label>\n          <p>Nome:</p>\n          <h2>Gilson</h2>\n        </ion-label>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="phone" slot="start"></ion-icon>\n        <ion-label>\n          <p>Whatsapp:</p>\n          <h2>(19)99248-5023</h2>\n        </ion-label>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="mail" slot="start"></ion-icon>\n        <ion-label>\n          <p>Email</p>\n          <h2>gilsonsilva.cintra@gmail.com</h2>\n        </ion-label>\n      </ion-item>\n\n          <ion-item>\n              <ion-icon name="name" slot="start"></ion-icon>\n              <ion-label>\n                <p>Nome:</p>\n                <h2>João Lemos</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="phone" slot="start"></ion-icon>\n              <ion-label>\n                <p>Whatsapp:</p>\n                <h2>(12)98858-7061 ou (12)99248-4020</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="mail" slot="start"></ion-icon>\n              <ion-label>\n                <p>Email</p>\n                <h2>joaojol@fab.com</h2>\n              </ion-label>\n            </ion-item>\n\n            <ion-item>\n                <ion-icon name="name" slot="start"></ion-icon>\n                <ion-label>\n                  <p>Nome:</p>\n                  <h2>Renan</h2>\n                </ion-label>\n              </ion-item>\n              <ion-item>\n                <ion-icon name="phone" slot="start"></ion-icon>\n                <ion-label>\n                  <p>Whatsapp:</p>\n                  <h2>(12)98808-9706</h2>\n                </ion-label>\n              </ion-item>\n              <ion-item>\n                <ion-icon name="mail" slot="start"></ion-icon>\n                <ion-label>\n                  <p>Email</p>\n                  <h2>renanru_zao@hotmail.com</h2>\n                </ion-label>\n              </ion-item>\n\n    </ion-list>\n  </div>\n\n  \n</ion-content>\n\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\contact\contact.html"*/,
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__["a" /* LoginServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__["a" /* LoginServiceProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__["CookieService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__["CookieService"]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]) === "function" && _g || Object])
-], ContactPage);
-
-var ContactPage_1, _a, _b, _c, _d, _e, _f, _g;
-//# sourceMappingURL=contact.js.map
-
-/***/ }),
-
 /***/ 121:
 /***/ (function(module, exports) {
 
@@ -89,13 +21,9 @@ webpackEmptyAsyncContext.id = 121;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/consulta/consulta.module": [
-		295,
-		1
-	],
 	"../pages/contact/contact.module": [
 		296,
-		0
+		4
 	],
 	"../pages/login/login.module": [
 		167
@@ -125,7 +53,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -174,26 +102,26 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_perfil_perfil__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_perfil_perfil__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_InterceptorHttpService__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__entity_Utils__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__entity_Utils__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login_module__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_consulta_consulta__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_contact_contact__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_consulta_consulta__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_contact_contact__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_status_bar__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_splash_screen__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_login_service_login_service__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_common_http__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_common_http__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -281,9 +209,9 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PerfilServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -328,7 +256,7 @@ PerfilServiceProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(276);
@@ -416,15 +344,15 @@ InterceptorHttpService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_login_login__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_login_login__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_consulta_consulta__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_perfil_perfil__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_consulta_consulta__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_perfil_perfil__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -484,16 +412,63 @@ var ComponentInicial = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* Nav */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* Nav */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* Nav */])
 ], ComponentInicial.prototype, "nav", void 0);
 ComponentInicial = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-header>\n\n        <ion-toolbar>\n\n            <ion-title>DRU</ion-title>\n\n        </ion-toolbar>\n\n    </ion-header>\n\n\n\n    <ion-content>\n\n        <ion-list>\n\n            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n                {{p.title}}\n\n            </button>\n\n        </ion-list>\n\n    </ion-content>\n\n</ion-menu>\n\n\n\n\n\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__["CookieService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__["CookieService"]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
+        __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */],
+        __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */],
+        __WEBPACK_IMPORTED_MODULE_1_angular2_cookie_core__["CookieService"]])
 ], ComponentInicial);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsultaServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ConsultaServiceProvider = (function () {
+    function ConsultaServiceProvider(http) {
+        this.http = http;
+        this.consultaUrl = __WEBPACK_IMPORTED_MODULE_0__entity_Utils__["a" /* Utils */].getUrlBackend() + "dru/";
+    }
+    ConsultaServiceProvider.prototype.getRegistros = function () {
+        console.log((this.consultaUrl));
+        return this.http.get(this.consultaUrl);
+    };
+    return ConsultaServiceProvider;
+}());
+ConsultaServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+], ConsultaServiceProvider);
+
+var _a;
+//# sourceMappingURL=consulta-service.js.map
 
 /***/ }),
 
@@ -502,7 +477,7 @@ var _a, _b, _c, _d, _e, _f;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_Utils__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(123);
@@ -574,6 +549,80 @@ LoginServiceProvider = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__about_about__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Generated class for the ContactPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ContactPage = ContactPage_1 = (function () {
+    function ContactPage(navCtrl, navParams, formBuilder, nav, loginService, cookieService, requestOptions) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.formBuilder = formBuilder;
+        this.nav = nav;
+        this.loginService = loginService;
+        this.cookieService = cookieService;
+        this.requestOptions = requestOptions;
+    }
+    ContactPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ContactPage');
+    };
+    ContactPage.prototype.doClickAbout = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__about_about__["a" /* AboutPage */]);
+    };
+    ContactPage.prototype.doClickContact = function () {
+        this.navCtrl.setRoot(ContactPage_1);
+    };
+    return ContactPage;
+}());
+ContactPage = ContactPage_1 = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-contact',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\contact\contact.html"*/'<!--\n  Generated template for the ContactPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n\n      <ion-buttons start>\n          <button ion-button (click)="doClickContact()">\n            <ion-icon name="contact"></ion-icon>\n          </button>\n        </ion-buttons>\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>\n          Contato\n        </ion-title>\n        <ion-buttons end>\n          <button ion-button (click)="doClickAbout()">\n            <ion-icon name="more"></ion-icon>\n          </button>\n        </ion-buttons>\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div>\n    <ion-label>\n      <h2>Informações dos Alunos</h2>\n    </ion-label>\n\n    <ion-list>\n\n        <ion-item>\n            <ion-icon name="name" slot="start"></ion-icon>\n            <ion-label>\n              <p>Nome:</p>\n              <h2>Daniel</h2>\n            </ion-label>\n          </ion-item>\n          <ion-item>\n            <ion-icon name="phone" slot="start"></ion-icon>\n            <ion-label>\n              <p>Whatsapp:</p>\n              <h2>(12)99106-5737</h2>\n            </ion-label>\n          </ion-item>\n          <ion-item>\n            <ion-icon name="mail" slot="start"></ion-icon>\n            <ion-label>\n              <p>Email</p>\n              <h2>danisantosalves@gmail.com</h2>\n            </ion-label>\n          </ion-item>\n\n          <ion-item>\n              <ion-icon name="name" slot="start"></ion-icon>\n              <ion-label>\n                <p>Nome:</p>\n                <h2>Danilo</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="phone" slot="start"></ion-icon>\n              <ion-label>\n                <p>Whatsapp:</p>\n                <h2>(12)98269-1615</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="mail" slot="start"></ion-icon>\n              <ion-label>\n                <p>Email</p>\n                <h2>daniloeng.ribeiro@gmail.com</h2>\n              </ion-label>\n            </ion-item>\n\n      <ion-item>\n        <ion-icon name="name" slot="start"></ion-icon>\n        <ion-label>\n          <p>Nome:</p>\n          <h2>Gilson</h2>\n        </ion-label>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="phone" slot="start"></ion-icon>\n        <ion-label>\n          <p>Whatsapp:</p>\n          <h2>(19)99248-5023</h2>\n        </ion-label>\n      </ion-item>\n      <ion-item>\n        <ion-icon name="mail" slot="start"></ion-icon>\n        <ion-label>\n          <p>Email</p>\n          <h2>gilsonsilva.cintra@gmail.com</h2>\n        </ion-label>\n      </ion-item>\n\n          <ion-item>\n              <ion-icon name="name" slot="start"></ion-icon>\n              <ion-label>\n                <p>Nome:</p>\n                <h2>João Lemos</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="phone" slot="start"></ion-icon>\n              <ion-label>\n                <p>Whatsapp:</p>\n                <h2>(12)98858-7061 ou (12)99248-4020</h2>\n              </ion-label>\n            </ion-item>\n            <ion-item>\n              <ion-icon name="mail" slot="start"></ion-icon>\n              <ion-label>\n                <p>Email</p>\n                <h2>joaojol@fab.com</h2>\n              </ion-label>\n            </ion-item>\n\n            <ion-item>\n                <ion-icon name="name" slot="start"></ion-icon>\n                <ion-label>\n                  <p>Nome:</p>\n                  <h2>Renan</h2>\n                </ion-label>\n              </ion-item>\n              <ion-item>\n                <ion-icon name="phone" slot="start"></ion-icon>\n                <ion-label>\n                  <p>Whatsapp:</p>\n                  <h2>(12)98808-9706</h2>\n                </ion-label>\n              </ion-item>\n              <ion-item>\n                <ion-icon name="mail" slot="start"></ion-icon>\n                <ion-label>\n                  <p>Email</p>\n                  <h2>renanru_zao@hotmail.com</h2>\n                </ion-label>\n              </ion-item>\n\n    </ion-list>\n  </div>\n\n  \n</ion-content>\n\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\contact\contact.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__["a" /* LoginServiceProvider */],
+        __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__["CookieService"],
+        __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]])
+], ContactPage);
+
+var ContactPage_1;
+//# sourceMappingURL=contact.js.map
+
+/***/ }),
+
+/***/ 47:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PerfilPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_perfil_service_perfil_service__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
@@ -614,18 +663,59 @@ PerfilPage = __decorate([
 
 /***/ }),
 
-/***/ 56:
+/***/ 53:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(46);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AboutPage = AboutPage_1 = (function () {
+    function AboutPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    AboutPage.prototype.doClickAbout = function () {
+        this.navCtrl.setRoot(AboutPage_1);
+    };
+    AboutPage.prototype.doClickContact = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */]);
+    };
+    return AboutPage;
+}());
+AboutPage = AboutPage_1 = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-about',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n    <ion-buttons start>\n\n      <button ion-button (click)="doClickContact()">\n\n        <ion-icon name="contact"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Sobre\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button (click)="doClickAbout()">\n\n        <ion-icon name="more"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n\n\n\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    Esse é o projeto denominado "Documento de Registro Único (DRU) da disciplina de Sistemas Distruídos pela UNIFESP.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\about\about.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+], AboutPage);
+
+var AboutPage_1;
+//# sourceMappingURL=about.js.map
+
+/***/ }),
+
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsultaPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_consulta_service_consulta_service__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contact_contact__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -639,45 +729,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-/**
- * Generated class for the ConsultaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 var ConsultaPage = (function () {
-    function ConsultaPage(navCtrl, navParams, formBuilder, nav, loginService, cookieService, requestOptions) {
+    function ConsultaPage(navCtrl, consultaService) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.formBuilder = formBuilder;
-        this.nav = nav;
-        this.loginService = loginService;
-        this.cookieService = cookieService;
-        this.requestOptions = requestOptions;
+        this.consultaService = consultaService;
     }
-    ConsultaPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ConsultaPage');
+    ConsultaPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.registros = [];
+        this.consultaService.getRegistros().subscribe(function (response) { return _this.registros = response; });
     };
     ConsultaPage.prototype.doClickContact = function () {
-        this.navCtrl.setRoot(ContactPage);
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__contact_contact__["a" /* ContactPage */]);
     };
     return ConsultaPage;
 }());
 ConsultaPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-consulta',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/'<!--\n\n  Generated template for the ConsultaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n      <ion-buttons start>\n\n          <button ion-button (click)="doClickContact()">\n\n            <ion-icon name="contact"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>\n\n          Consulta\n\n        </ion-title>\n\n        <ion-buttons end>\n\n          <button ion-button (click)="doClickAbout()">\n\n            <ion-icon name="more"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div class="user-photo" padding-top>\n\n    <ion-avatar>\n\n      <img [src]="\'/assets/images/noavatar.png\'">\n\n    </ion-avatar>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Informações Principais</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="person" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="cpf" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>CPF</p>\n\n          <h2>123.456.789-00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="nasc" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Data de Nascimento</p>\n\n          <h2>00/00/00</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Contato</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Email</p>\n\n          <h2>email@email.com</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Telefone</p>\n\n          <h2>(00)1234-5678</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Afiliação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome da mãe</p>\n\n          <h2>nome nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Nome do pai</p>\n\n          <h2>nome nome</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n\n\n  <div>\n\n    <ion-label>\n\n      <h2>Documentação</h2>\n\n    </ion-label>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-icon name="mail" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Título de Eleitor</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Passaporte</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro SUS</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-icon name="telef" slot="start"></ion-icon>\n\n        <ion-label>\n\n          <p>Registro Geral</p>\n\n          <h2>1234567890</h2>\n\n        </ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+        selector: 'consulta-page',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n    <ion-buttons start>\n\n      <button ion-button (click)="doClickContact()">\n\n        <ion-icon name="contact"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Consulta\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button (click)="doClickAbout()">\n\n        <ion-icon name="more"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>DRU</ion-list-header>\n\n    <ion-item *ngFor="let consulta of registros">\n\n      <ion-icon name="ionic" item-left></ion-icon>\n\n      <h2><b>{{consulta.nome}}</b></h2>\n\n      <h3>{{consulta.cpf}}</h3>\n\n      <h3>{{consulta.endereco}}</h3>\n\n      <h3><i>{{consulta.email}}</i></h3>\n\n      <h3>{{consulta.telefone}}</h3>\n\n\n\n      <ion-icon name="create" class="medio" color="primary" item-right></ion-icon>\n\n\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\consulta\consulta.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_0__providers_consulta_service_consulta_service__["a" /* ConsultaServiceProvider */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__["a" /* LoginServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_login_service_login_service__["a" /* LoginServiceProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__["CookieService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angular2_cookie_core__["CookieService"]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]) === "function" && _g || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__providers_consulta_service_consulta_service__["a" /* ConsultaServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_consulta_service_consulta_service__["a" /* ConsultaServiceProvider */]) === "function" && _b || Object])
 ], ConsultaPage);
 
-var _a, _b, _c, _d, _e, _f, _g;
+var _a, _b;
 //# sourceMappingURL=consulta.js.map
 
 /***/ }),
 
-/***/ 61:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -697,12 +777,12 @@ var Utils = (function () {
 
 /***/ }),
 
-/***/ 86:
+/***/ 88:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tabs_tabs__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tabs_tabs__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_login_service_login_service__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
@@ -790,15 +870,15 @@ LoginPage = __decorate([
 
 /***/ }),
 
-/***/ 87:
+/***/ 89:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__perfil_perfil__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__perfil_perfil__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -814,14 +894,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var TabsPage = (function () {
     function TabsPage() {
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__about_about__["a" /* AboutPage */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_0__perfil_perfil__["a" /* PerfilPage */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_1__home_home__["a" /* HomePage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__about_about__["a" /* AboutPage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_3__perfil_perfil__["a" /* PerfilPage */];
     }
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <!--ion-tab [root]="tab3Root" tabTitle="Perfil" tabIcon="contacts"></ion-tab-->\n\n</ion-tabs>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\tabs\tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <!--ion-tab [root]="tab3Root" tabTitle="Perfil" tabIcon="contacts"></ion-tab-->\n\n</ion-tabs>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -830,21 +910,21 @@ TabsPage = __decorate([
 
 /***/ }),
 
-/***/ 88:
+/***/ 90:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_cookie_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__consulta_consulta__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__perfil_perfil__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__contact_contact__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__consulta_consulta__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__perfil_perfil__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__contact_contact__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -900,50 +980,6 @@ HomePage = __decorate([
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 89:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(112);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AboutPage = AboutPage_1 = (function () {
-    function AboutPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    AboutPage.prototype.doClickAbout = function () {
-        this.navCtrl.setRoot(AboutPage_1);
-    };
-    AboutPage.prototype.doClickContact = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */]);
-    };
-    return AboutPage;
-}());
-AboutPage = AboutPage_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-about',template:/*ion-inline-start:"E:\eclipse-workspace\dru-sd-front\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n\n\n    <ion-buttons start>\n\n      <button ion-button (click)="doClickContact()">\n\n        <ion-icon name="contact"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Sobre\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button (click)="doClickAbout()">\n\n        <ion-icon name="more"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n\n\n\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    Esse é o projeto denominado "Documento de Registro Único (DRU) da disciplina de Sistemas Distruídos pela UNIFESP.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"E:\eclipse-workspace\dru-sd-front\src\pages\about\about.html"*/
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
-], AboutPage);
-
-var AboutPage_1, _a;
-//# sourceMappingURL=about.js.map
 
 /***/ })
 

@@ -25203,6 +25203,10 @@ ion-navbar.toolbar {
   }
 }
 
+.medio {
+  zoom: 1.5;
+}
+
 page-consulta .user-photo ion-avatar {
   margin: 0 auto;
   width: 120px;
