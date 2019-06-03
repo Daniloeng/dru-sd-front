@@ -18,9 +18,15 @@ export class DruServiceProvider {
     this.druUrl  = Utils.getUrlBackend() + "dru/";
   }
 
-  public getDRU(cpf: any) {
-  console.log('Buscando por ' + cpf + ' em ' + this.druUrl);
-  return this.http.get(this.druUrl);
+  public getDRUbyCPF(cpf: any) {
+  
+  return this.http.get(this.druUrl + cpf);
   }
+
+ public ListarDRUS()
+   {
+    return this.http.get(this.druUrl);
+   }
+ 
 
 }

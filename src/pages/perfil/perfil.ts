@@ -1,6 +1,6 @@
 import { PerfilServiceProvider } from './../../providers/perfil-service/perfil-service';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { TabsPage } from './../tabs/tabs';
 import { RequestOptions } from '@angular/http';
@@ -16,14 +16,28 @@ import { CookieService } from 'angular2-cookie/core';
 })
 export class PerfilPage {
   public perfis: any;
-  constructor(public navCtrl: NavController, public perfilService: PerfilServiceProvider) {
+  private loading:any;
+  constructor(public navCtrl: NavController,
+              public perfilService: PerfilServiceProvider,
+              public loadingController: LoadingController
+              ) {
+
+                this.loading= this.loadingController.create();
 
   }
 
   ionViewWillEnter() {
     this.perfis = [];
+    this.loading.present();
     this.perfilService.getPerfis().subscribe(
-      response => this.perfis = response
+      response => {
+        this.perfis = response;
+        this.loading.dismiss();          
+                  },
+      error=>{
+        console.log(error);
+        this.loading.dismiss();
+      }
     );
   }
 
