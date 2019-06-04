@@ -8,7 +8,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from './../pages/tabs/tabs';
+// import { TabsPage } from './../pages/tabs/tabs';
 import { ConsultaPage } from './../pages/consulta/consulta';
 import { HomePage } from './../pages/home/home';
 import { PerfilPage } from './../pages/perfil/perfil';
@@ -36,7 +36,7 @@ export class ComponentInicial {
 
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
-      this.rootPage = TabsPage;
+      this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
     }
