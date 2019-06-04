@@ -29,6 +29,7 @@ plugins/
 plugins/android.json
 plugins/ios.json
 www/
+www/build
 
 # Trash data
 $RECYCLE.BIN/
