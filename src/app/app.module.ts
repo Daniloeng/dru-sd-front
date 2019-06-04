@@ -21,7 +21,7 @@ import { LoginServiceProvider } from '../providers/login-service/login-service';
 import { XHRBackend, RequestOptions } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DruServiceProvider } from '../providers/dru-service/dru-service';
-
+  
 
 
 
@@ -37,7 +37,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
 
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     HttpClientModule,
     HttpModule,
     LoginPageModule,

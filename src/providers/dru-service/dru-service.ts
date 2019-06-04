@@ -12,21 +12,18 @@ import { Utils } from './../../entity/Utils';
 @Injectable()
 export class DruServiceProvider {
 
-  public druUrl:string;
+  public druUrl: string;
 
   constructor(public http: Http) {
-    this.druUrl  = Utils.getUrlBackend() + "dru/";
+    this.druUrl = Utils.getUrlBackend() + "dru/";
   }
 
   public getDRUbyCPF(cpf: any) {
-  
-  return this.http.get(this.druUrl + cpf);
+
+    return this.http.get(this.druUrl + cpf);
   }
 
- public ListarDRUS()
-   {
+  public getDRUList() {
     return this.http.get(this.druUrl);
-   }
- 
-
+  }
 }

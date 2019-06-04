@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { TabsPage } from './../tabs/tabs';
-import { RequestOptions } from '@angular/http';
-import { LoginServiceProvider } from './../../providers/login-service/login-service';
-import { HomePage } from './../home/home';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { FormBuilder } from '@angular/forms';
-import { CookieService } from 'angular2-cookie/core';
 import { AboutPage } from './../about/about';
+import { DruServiceProvider } from './../../providers/dru-service/dru-service';
 
 /**
  * Generated class for the ContactPage page.
@@ -23,15 +18,14 @@ import { AboutPage } from './../about/about';
 })
 
 export class ContactPage {
-
+  private loading: any;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public formBuilder: FormBuilder,
     public nav: NavController,
-    private loginService: LoginServiceProvider,
-    private cookieService: CookieService,
-    private requestOptions: RequestOptions,
+    public druservice:DruServiceProvider,
+    public loadingController: LoadingController
 ) {
   
 }
@@ -47,5 +41,13 @@ export class ContactPage {
   doClickContact() {
     this.navCtrl.setRoot(ContactPage);
   }
+
+  carregarDRU()
+    {
+
+
+
+    }
+  
 
 }

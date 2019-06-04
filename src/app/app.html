@@ -1,13 +1,14 @@
-<ion-menu [content]="content">
-    <ion-header>
-        <ion-toolbar>
+<ion-menu [content]="content" class="custom">
+    <ion-header bar > 
+        <ion-toolbar color="primary" >
             <ion-title>DRU</ion-title>
         </ion-toolbar>
     </ion-header>
 
-    <ion-content>
-        <ion-list>
+    <ion-content class="custom">
+        <ion-list >
             <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                    <ion-icon name="ionic" item-left></ion-icon>
                 {{p.title}}
             </button>
         </ion-list>

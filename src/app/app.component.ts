@@ -36,18 +36,18 @@ export class ComponentInicial {
     this.initializeApp() 
     
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Consultar DRU', component: ConsultaPage },
-      { title: 'Alterar DRU', component: ConsultaPage },
-      { title: 'Solicitar Liberação de DRU', component: ConsultaPage },
-      { title: 'Liberar Consulta de DRU', component: ConsultaPage },
+      { title: 'Início', component: HomePage },
+      { title: 'Consultar', component: ConsultaPage },
+      { title: 'Alterar', component: ConsultaPage },
+      { title: 'Solicitar Liberação', component: ConsultaPage },
+      { title: 'Liberar Consulta', component: ConsultaPage },
       { title: 'Perfis de Usuário', component: PerfilPage }
     ];
 
 
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
-      this.rootPage = TabsPage;
+      this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
     }
