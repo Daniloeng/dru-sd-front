@@ -47,7 +47,7 @@ export class ComponentInicial {
 
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
-      this.rootPage = TabsPage;
+      this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
     }
