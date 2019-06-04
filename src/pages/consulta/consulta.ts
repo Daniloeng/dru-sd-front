@@ -1,14 +1,8 @@
-import { ConsultaServiceProvider } from '../../providers/consulta-service/consulta-service';
 import { Component } from '@angular/core';
 import {  NavController, NavParams, LoadingController } from 'ionic-angular';
-
-import { TabsPage } from './../tabs/tabs';
-import { RequestOptions } from '@angular/http';
-import { LoginServiceProvider } from './../../providers/login-service/login-service';
-import { HomePage } from './../home/home';
-import { FormBuilder } from '@angular/forms';
-import { CookieService } from 'angular2-cookie/core';
+import { ConsultaServiceProvider } from '../../providers/consulta-service/consulta-service';
 import { ContactPage } from './../contact/contact';
+import { DruServiceProvider } from '../../providers/dru-service/dru-service';
 
 @Component({
   selector: 'consulta-page',
@@ -20,6 +14,7 @@ export class ConsultaPage {
   public loading:any;
   constructor(public navCtrl: NavController,
               public consultaService: ConsultaServiceProvider,
+              public druservice: DruServiceProvider,
               public loadingController: LoadingController
               ) {
       this.loading=loadingController.create({content:'Aguarde...', showBackdrop:true, spinner:'bubbles'});

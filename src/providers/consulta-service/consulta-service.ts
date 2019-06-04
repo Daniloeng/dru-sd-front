@@ -14,7 +14,8 @@ export class ConsultaServiceProvider {
     constructor(public http: HttpClient) {
         this.consultaUrl = Utils.getUrlBackend() + "dru/";
     }
-
+    /// Nao deveria existir este consulta service. 
+    // Deveria estar dentro do dru-service 
     public getRegistros() {
         console.log((this.consultaUrl));
         return this.http.get(this.consultaUrl);
