@@ -1,6 +1,6 @@
 import { ConsultaServiceProvider } from '../../providers/consulta-service/consulta-service';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { TabsPage } from './../tabs/tabs';
 import { RequestOptions } from '@angular/http';
@@ -17,14 +17,26 @@ import { ContactPage } from './../contact/contact';
 })
 export class ConsultaPage {
   public registros: any;
-  constructor(public navCtrl: NavController, public consultaService: ConsultaServiceProvider) {
-
+  public loading:any;
+  constructor(public navCtrl: NavController,
+              public consultaService: ConsultaServiceProvider,
+              public loadingController: LoadingController
+              ) {
+      this.loading=loadingController.create({content:'Aguarde...', showBackdrop:true, spinner:'bubbles'});
   }
 
   ionViewWillEnter() {
     this.registros = [];
+    this.loading.present();
     this.consultaService.getRegistros().subscribe(
-      response => this.registros = response
+      response =>{ 
+        this.registros = response;
+        this.loading.dismiss();
+      },
+      error=> {
+        this.loading.dismiss();
+        console.warn(error);
+      }
     );
   }
 

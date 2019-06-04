@@ -3,7 +3,7 @@ import { RequestOptions } from '@angular/http';
 import { LoginServiceProvider } from './../../providers/login-service/login-service';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { FormBuilder } from '@angular/forms';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -31,22 +31,28 @@ export class LoginPage {
         private loginService: LoginServiceProvider,
         private cookieService: CookieService,
         private requestOptions: RequestOptions,
+        private loadingController:LoadingController
     ) {
 
         this.loginForm = formBuilder.group({
             email: [''],
             senha: ['']
         });
-
+            this.loading=this.loadingController.create({content:'Aguarde...', showBackdrop:true,spinner:'bubbles'});
     }
 
     private loginUser(): void {
+        this.loading.present();
         if (this.loginForm.valid) {
             this.loginService.login(this.loginForm.value).subscribe(
-                res => this.loginSuccess(res)
+                res => {
+                    this.loginSuccess(res);
+                    this.loading.dismiss();
+                }
             );
         } else {
-            this.loading.present();
+            //this.loading.present();
+            this.loading.dismiss();
         }
     }
 

@@ -22,7 +22,7 @@ export class PerfilPage {
               public loadingController: LoadingController
               ) {
 
-                this.loading= this.loadingController.create();
+                this.loading= this.loadingController.create({content:'Aguarde...', showBackdrop:true,spinner:'bubbles'});
 
   }
 
