@@ -8,12 +8,12 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/tabs/tabs';
+import { TabsPage } from './../pages/tabs/tabs';
 import { ConsultaPage } from './../pages/consulta/consulta';
-import { HomePage } from '../pages/home/home';
-import { PerfilPage } from '../pages/perfil/perfil';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { HomePage } from './../pages/home/home';
+import { PerfilPage } from './../pages/perfil/perfil';
+import { AboutPage } from './../pages/about/about';
+import { ContactPage } from './../pages/contact/contact';
 
 
 @Component({
@@ -23,8 +23,6 @@ export class ComponentInicial {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = LoginPage;
 
-  pages: Array<{ title: string, component: any }>;
-
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
@@ -33,16 +31,7 @@ export class ComponentInicial {
     private cookieService: CookieService
   ) {
 
-    this.initializeApp() 
-    
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Consultar DRU', component: ConsultaPage },
-      { title: 'Alterar DRU', component: ConsultaPage },
-      { title: 'Solicitar Liberação de DRU', component: ConsultaPage },
-      { title: 'Liberar Consulta de DRU', component: ConsultaPage },
-      { title: 'Perfis de Usuário', component: PerfilPage }
-    ];
+    this.initializeApp()
 
 
     if (this.cookieService.getObject("usuarioAtual")) {
@@ -51,7 +40,7 @@ export class ComponentInicial {
     } else {
       this.rootPage = LoginPage;
     }
-    
+
 
   }
 
@@ -62,9 +51,36 @@ export class ComponentInicial {
     });
   }
 
-  openPage(page) {
-    this.nav.setRoot(page.component);
-  }
 
-  
+    logout() {
+      this.cookieService.removeAll();
+      this.requestOptions.headers.set('Authorization', "Bearer ");
+      this.nav.setRoot(LoginPage);
+
+    }
+
+
+    doClickConsulta() {
+      this.nav.setRoot(ConsultaPage);
+    }
+
+
+    doClickHome() {
+      this.nav.setRoot(HomePage);
+    }
+
+    doClickPerfil() {
+      this.nav.setRoot(PerfilPage);
+    }
+
+    doClickAbout() {
+      this.nav.setRoot(AboutPage);
+    }
+
+    doClickContact() {
+      this.nav.setRoot(ContactPage);
+    }
+
+
+
 }
