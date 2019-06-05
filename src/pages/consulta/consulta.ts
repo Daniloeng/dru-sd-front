@@ -13,7 +13,6 @@ import { ContactPage } from './../contact/contact';
 import { ToastController } from 'ionic-angular';
 
 
-
 @Component({
   selector: 'consulta-page',
   templateUrl: 'consulta.html',
@@ -80,12 +79,11 @@ export class ConsultaPage {
     filtrarRegistros() {
         this.hasFilter = false;
         this.registros = this.noFilter.filter((item) => {
-            return (  item.nome.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1 ||
-                      item.cpf.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1 ||
-                      item.email.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1  );
+            return (  item.nome.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) > -1 ||
+                      item.cpf.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) > -1 ||
+                      item.email.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) > -1  );
         });
       }
-
 
       alternarSearchbar() {
           this.mostraSearchbar = !this.mostraSearchbar;
