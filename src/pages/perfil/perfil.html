@@ -8,9 +8,9 @@
     </ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="showFilters()">
-        <ion-icon name="search"></ion-icon>
-      </button>
+          <button ion-button icon-only (click)="alternarSearchbar()">
+            <ion-icon name="search"></ion-icon>
+          </button>
     </ion-buttons>
 
   </ion-navbar>
@@ -19,9 +19,14 @@
 
 <ion-content padding>
 
-  <h2>Perfis</h2>
-  <hr>
-  <br>
+  <ion-toolbar *ngIf="mostraSearchbar">
+    <ion-searchbar
+      [(ngModel)]="termoDePesquisa"
+      (ionInput)="filtrarPerfis()"
+      animated="true"
+      placeholder="Pesquisar" >
+   </ion-searchbar>
+  </ion-toolbar>
 
 
   <ion-list padding>

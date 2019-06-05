@@ -14,9 +14,19 @@ import { CookieService } from 'angular2-cookie/core';
   templateUrl: 'perfil.html',
   providers: [PerfilServiceProvider]
 })
+
+
+
 export class PerfilPage {
+
   public perfis: any;
   private loading:any;
+
+  public hasFilter: boolean = false;
+  public noFilter: any;
+
+  public mostraSearchbar: boolean = false;
+
   constructor(public navCtrl: NavController,
               public perfilService: PerfilServiceProvider,
               public loadingController: LoadingController
@@ -27,12 +37,17 @@ export class PerfilPage {
   }
 
   ionViewWillEnter() {
-    this.perfis = [];
+
+    this.perfis = this.noFilter;
+
     this.loading.present();
     this.perfilService.getPerfis().subscribe(
       response => {
         this.perfis = response;
-        this.loading.dismiss();          
+        this.loading.dismiss();
+
+        this.noFilter = this.perfis;
+        this.hasFilter = false;
                   },
       error=>{
         console.log(error);
@@ -40,5 +55,21 @@ export class PerfilPage {
       }
     );
   }
+
+
+
+
+  filtrarPerfis() {
+    this.hasFilter = false;
+    this.perfis = this.noFilter.filter((item) => {
+      return  item.nome.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1;
+    });
+  }
+
+
+  alternarSearchbar() {
+    this.mostraSearchbar = !this.mostraSearchbar;
+  }
+
 
 }
