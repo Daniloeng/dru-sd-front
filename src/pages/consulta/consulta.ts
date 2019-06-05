@@ -24,6 +24,12 @@ export class ConsultaPage {
   public registros: any;
   public loading:any;
 
+  public hasFilter: boolean = false;
+  public noFilter: any;
+
+  public mostraSearchbar: boolean = false;
+
+
   constructor(public navCtrl: NavController,
               public consultaService: ConsultaServiceProvider,
               public loadingController: LoadingController,
@@ -33,18 +39,25 @@ export class ConsultaPage {
   }
 
   ionViewWillEnter() {
-    this.registros = [];
+
+    this.registros = this.noFilter;
     this.loading.present();
+
     this.consultaService.getRegistros().subscribe(
       response =>{
         this.registros = response;
         this.loading.dismiss();
+
+        this.noFilter = this.registros;
+        this.hasFilter = false;
+
       },
       error=> {
         this.loading.dismiss();
         console.warn(error);
       }
     );
+
   }
 
   doClickContact() {
@@ -53,10 +66,7 @@ export class ConsultaPage {
 
 
 
-
-
     apresentarToast(nome: String):void {
-
       let toast = this.toastCtrl.create({
         message: "Pedido enviado para " + nome,
         duration: 3000,
@@ -67,5 +77,18 @@ export class ConsultaPage {
     }
 
 
+    filtrarRegistros() {
+        this.hasFilter = false;
+        this.registros = this.noFilter.filter((item) => {
+            return (  item.nome.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1 ||
+                      item.cpf.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1 ||
+                      item.email.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1  );
+        });
+      }
+
+
+      alternarSearchbar() {
+          this.mostraSearchbar = !this.mostraSearchbar;
+        }
 
 }
