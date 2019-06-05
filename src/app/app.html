@@ -1,0 +1,92 @@
+<ion-menu side="start"  [content]="content" no-padding>
+
+  <ion-content no-padding class="no-scroll">
+
+
+    <div padding class="background-sidemenu">
+
+      <!-- <ion-icon name="contact" class="gigante" item-left></ion-icon> -->
+
+      <img src="../assets/images/usuario.png">
+
+      <p>
+        <font color="white">
+        <b>fulano</b><br>
+        Fulano de Tal<br>
+        fulano@fulanodetal.com.br
+        </font>
+      </p>
+
+    </div>
+
+
+
+    <ion-list no-padding no-lines class="fundo-branco">
+
+      <button ion-item menuClose (click)="doClickHome()">
+        <ion-icon name="home" item-left></ion-icon>
+        Home
+      </button>
+
+      <button ion-item menuClose (click)="doClickConsulta()">
+        <ion-icon name="search" color="primary" item-left></ion-icon>
+        Consultar
+      </button>
+
+      <button ion-item menuClose (click)="doClickConsulta()">
+        <ion-icon name="create" color="primary" item-left></ion-icon>
+        Alterar
+      </button>
+
+
+
+      <!-- <br> -->
+      <ion-item-divider>
+        <!-- <ion-label>
+          Solicitados pra Mim
+        </ion-label> -->
+      </ion-item-divider>
+
+      <button ion-item menuClose (click)="doClickConsulta()">
+        <ion-icon name="pricetag" item-left></ion-icon>
+        Solicitar Liberação
+      </button>
+
+      <button ion-item menuClose (click)="doClickConsulta()">
+        <ion-icon name="pricetags" color="secondary" item-left></ion-icon>
+        Liberar Consulta
+      </button>
+
+
+      <!-- <br> -->
+      <ion-item-divider>
+        <!-- <ion-label>
+          Sistema
+        </ion-label> -->
+      </ion-item-divider>
+
+      <button ion-item menuClose (click)="doClickPerfil()">
+        <ion-icon name="people" color="primary" item-left></ion-icon>
+        Perfis de Usuários
+      </button>
+
+
+      <button ion-item menuClose (click)="doClickAbout()">
+        <ion-icon name="information-circle" item-left></ion-icon>
+        Sobre
+      </button>
+
+      <button ion-item menuClose (click)="logout()">
+        <ion-icon name="lock" item-left></ion-icon>
+        Sair
+      </button>
+
+    </ion-list>
+
+
+  </ion-content>
+</ion-menu>
+
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,39 +1,45 @@
 <ion-header>
-  <ion-navbar>
-
-    <ion-buttons start>
-      <button ion-button (click)="doClickContact()">
-        <ion-icon name="contact"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-navbar  color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Consulta
+      Consulta Documentos
     </ion-title>
+
     <ion-buttons end>
-      <button ion-button (click)="doClickAbout()">
-        <ion-icon name="more"></ion-icon>
+      <button ion-button icon-only (click)="showFilters()">
+        <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
-
 
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>DRU</ion-list-header>
-    <ion-item *ngFor="let consulta of registros">
-      <ion-icon name="contact" item-left></ion-icon>
+
+
+<ion-content padding>
+
+  <h2>Documentos</h2>
+  <hr>
+  <br>
+
+
+  <ion-list no-padding>
+
+    <ion-item no-padding  *ngFor="let consulta of registros">
+
+      <!-- Apesentar icone conforme a UF -->
+      <img item-left padding src="../../assets/images/sp.jpg">
+
       <h2><b>{{consulta.nome}}</b></h2>
       <h3>{{consulta.cpf}}</h3>
-      <h3>{{consulta.endereco}}</h3>
-      <h3><i>{{consulta.email}}</i></h3>
-      <h3>{{consulta.telefone}}</h3>
+      <h3>{{consulta.email}}</h3>
 
-      <ion-icon name="create" class="medio" color="primary" item-right></ion-icon>
+      <!-- Apesentar icone conforme o sexo -->
+      <ion-icon padding name="man" class="medio" item-right></ion-icon>
+
+      <ion-icon name="add-circle" class="medio" color="primary" item-right (click)="apresentarToast(consulta.nome)"></ion-icon>
 
     </ion-item>
   </ion-list>

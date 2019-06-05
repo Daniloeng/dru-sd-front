@@ -1,0 +1,93 @@
+
+.no-scroll .scroll-content{
+     overflow: auto;
+}
+
+.rounded-20 {
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+}
+
+
+.rounded-30 {
+  border-radius: 30%;
+  -webkit-border-radius: 30%;
+}
+
+
+.rounded-40 {
+  border-radius: 40%;
+  -webkit-border-radius: 40%;
+}
+
+
+.circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+
+
+.fundo-cinza {
+  background-color: "#CCCCCC";
+}
+
+
+
+.fundo-cinza-claro {
+  background-color: "#DDDDDD";
+}
+
+
+
+.pequeno {
+  zoom: 0.60;
+}
+
+.normal {
+  zoom: 1.0;
+}
+
+.medio {
+  zoom: 1.5;
+}
+
+.grande {
+  zoom: 2.0;
+}
+
+
+
+.enorme {
+  zoom: 4.0;
+}
+
+
+.gigante {
+  zoom: 6.0;
+}
+
+
+
+
+.fundo-branco {
+  background-color: #ffffff;
+}
+
+
+$SIDEMENU_TOP: #339966;
+$SIDEMENU_BOTTOM: #001a33;
+
+.gradiente-sidemenu {
+  background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+  background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+  background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+  background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+}
+
+
+.background-sidemenu {
+  background-image: url('./../assets/images/background-02.jpg');
+  background-size: contain;
+  background-repeat:no-repeat;
+}
