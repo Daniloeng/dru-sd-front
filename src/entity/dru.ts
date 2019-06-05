@@ -4,6 +4,7 @@ export class DRU{
     public email:string;
     public telefone:string;
     public endereco:string;
+
     constructor(){
         this.nome = "";
         this.cpf = "";
