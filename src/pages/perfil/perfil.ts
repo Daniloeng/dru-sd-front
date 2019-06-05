@@ -27,6 +27,8 @@ export class PerfilPage {
 
   public mostraSearchbar: boolean = false;
 
+  public termoPesquisa: any;
+
   constructor(public navCtrl: NavController,
               public perfilService: PerfilServiceProvider,
               public loadingController: LoadingController
@@ -62,7 +64,7 @@ export class PerfilPage {
   filtrarPerfis() {
     this.hasFilter = false;
     this.perfis = this.noFilter.filter((item) => {
-      return  item.nome.toLowerCase().indexOf(this.termoDePesquisa.toLowerCase()) > -1;
+      return  item.nome.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) > -1;
     });
   }
 

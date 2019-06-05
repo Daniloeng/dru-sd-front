@@ -28,6 +28,8 @@ export class ConsultaPage {
 
   public mostraSearchbar: boolean = false;
 
+  public termoPesquisa: any;
+
 
   constructor(public navCtrl: NavController,
               public consultaService: ConsultaServiceProvider,
