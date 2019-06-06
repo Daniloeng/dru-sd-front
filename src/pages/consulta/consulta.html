@@ -33,14 +33,14 @@
     <ion-item no-padding  *ngFor="let consulta of registros">
 
       <!-- Apesentar icone conforme a UF -->
-      <img item-left padding src="../../assets/images/sp.jpg">
+      <img item-left padding src="../../assets/images/{{consulta.uf}}.gif">
 
-      <h2><b>{{consulta.nome}}</b></h2>
-      <h3>{{consulta.cpf}}</h3>
-      <h3>{{consulta.email}}</h3>
+      <h3><b>{{consulta.nome}}</b></h3>
+      <h4>{{consulta.cpf}}</h4>
+      <h4>{{consulta.email}}</h4>
 
       <!-- Apesentar icone conforme o sexo -->
-      <ion-icon padding name="man" class="medio" item-right></ion-icon>
+      <ion-icon padding [name]="consulta.sexo == 'M'? 'man' :'woman'"  class="medio" item-right [color]="consulta.sexo == 'M'? 'dark' :'pink'" ></ion-icon>
 
       <ion-icon name="add-circle" class="medio" color="primary" item-right (click)="apresentarToast(consulta.nome)"></ion-icon>
 
