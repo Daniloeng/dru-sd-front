@@ -4,7 +4,8 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        background: #60a3bc !important;
+        background: url(../../assets/images/background/background.jpg) !important;
+        background-repeat: no-repeat;
     }
     .user_card {
         height: 400px;
@@ -55,8 +56,8 @@
         padding: 0 3rem;
     }
     .input-group-text {
-        background: #000 !important;
-        color: white !important;
+        background: #FFF !important;
+        color: #000 !important;
         border: 0 !important;
         border-radius: 0.35rem 0 0 0.35rem !important;
     }
@@ -68,3 +69,7 @@
     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
         background-color: #000 !important;
     }
+
+    .fa-user,.fa-lock {
+        color: #999;
+      }
