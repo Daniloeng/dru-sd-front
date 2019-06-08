@@ -68,7 +68,8 @@ export class LoginPage {
 
     public redirectPage(res: any) {
         this.cookieService.putObject("usuarioAtual", res);
-        this.navCtrl.setRoot(TabsPage);
+        //this.navCtrl.setRoot(TabsPage);
+        this.navCtrl.setRoot(HomePage);
     }
 
     redirectUser(response) {
