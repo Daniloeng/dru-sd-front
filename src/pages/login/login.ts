@@ -22,6 +22,7 @@ import { CookieService } from 'angular2-cookie/core';
 export class LoginPage {
     public loginForm;
     loading: any;
+    usuarioOnLine = new Array<any>();
 
     constructor(
         public navCtrl: NavController,
@@ -80,13 +81,14 @@ export class LoginPage {
             title: "Login",
             message: "E-mail ou senha incorretos!",
             buttons:[{text:"Fechar"}]
-        });
+        }); 
 
         msg.present();
     }
 
     public redirectPage(res: any) {
         this.cookieService.putObject("usuarioAtual", res);
+        this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
         this.navCtrl.setRoot(HomePage);
     }
 

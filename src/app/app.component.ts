@@ -22,6 +22,7 @@ import { ContactPage } from './../pages/contact/contact';
 export class ComponentInicial {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = LoginPage;
+  usuarioOnLine = new Array<any>();
 
   constructor(
     public platform: Platform,
@@ -33,9 +34,9 @@ export class ComponentInicial {
 
     this.initializeApp()
 
-
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
+      this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
       this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
@@ -51,6 +52,14 @@ export class ComponentInicial {
     });
   }
 
+  doRefresh(event) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+  }
 
     logout() {
       this.cookieService.removeAll();
