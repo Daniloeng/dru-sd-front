@@ -54,15 +54,12 @@
                   </ion-item>
                   <ion-item class="error-message"
                     *ngIf="!loginForm.controls.senha.valid  && loginForm.controls.senha.dirty">
-                    <p>Sua senha precisa conter pelo menos 6 caracteres</p>
+                    <p></p>
                   </ion-item>
                 </div>
 
                 <button ion-button block type="submit">
                   Acessar
-                </button>
-                <button ion-button block clear (click)="goToSignup()">
-                  <!--Criar uma nova conta  -->
                 </button>
 
               </div>
