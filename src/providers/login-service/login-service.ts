@@ -33,11 +33,10 @@ export class LoginServiceProvider {
     });
 
     let options = new RequestOptions({ headers: headers });
-
+    
     return this.http.post(this.loginUrl + usuario.email + "&password=" +
       encodeURIComponent(usuario.senha), {}, options)
       .map(res => res.json());
-
   }
 
   public getUsuarioAtual(token: any) {

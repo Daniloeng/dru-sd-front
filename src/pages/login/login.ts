@@ -3,7 +3,7 @@ import { RequestOptions } from '@angular/http';
 import { LoginServiceProvider } from './../../providers/login-service/login-service';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { FormBuilder } from '@angular/forms';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -14,7 +14,7 @@ import { CookieService } from 'angular2-cookie/core';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage() 
 @Component({
     selector: 'page-login',
     templateUrl: 'login.html'
@@ -32,27 +32,35 @@ export class LoginPage {
         private loginService: LoginServiceProvider,
         private cookieService: CookieService,
         private requestOptions: RequestOptions,
-        private loadingController:LoadingController
+        private loadingController:LoadingController,
+        private alertController:AlertController,
     ) {
 
         this.loginForm = formBuilder.group({
             email: [''],
             senha: ['']
         });
-            this.loading=this.loadingController.create({content:'Aguarde...', showBackdrop:true,spinner:'bubbles'});
-    }
+        
+        this.loading=this.loadingController.create({content:'Aguarde...', showBackdrop:true,spinner:'bubbles'});
+    }    
 
     private loginUser(): void {
-        this.loading.present();
         if (this.loginForm.valid) {
+            this.loading.present();
             this.loginService.login(this.loginForm.value).subscribe(
                 res => {
-                    this.loginSuccess(res);
+                    this.loading.present();
                     this.loading.dismiss();
+                    this.loginSuccess(res);
+                },
+                err => {
+                    this.loading.present();
+                    this.loading.dismiss();
+                    this.loginFailed(err);
                 }
             );
         } else {
-            //this.loading.present();
+            this.loading.present();
             this.loading.dismiss();
         }
     }
@@ -64,13 +72,23 @@ export class LoginPage {
         this.loginService.getUsuarioAtual(res.access_token).subscribe(
             res => this.redirectPage(res)
         );
+    }
 
+    public loginFailed(err: any){
+        this.cookieService.removeAll();
+        this.navCtrl.setRoot(LoginPage);
+        let msg = this.alertController.create({
+            title: "Login",
+            message: "E-mail ou senha incorretos!",
+            buttons:[{text:"Fechar"}]
+        });
+
+        msg.present();
     }
 
     public redirectPage(res: any) {
         this.cookieService.putObject("usuarioAtual", res);
         this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
-        //this.navCtrl.setRoot(TabsPage);
         this.navCtrl.setRoot(HomePage);
     }
 
