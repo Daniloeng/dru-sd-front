@@ -3,7 +3,7 @@ import { RequestOptions } from '@angular/http';
 import { LoginServiceProvider } from './../../providers/login-service/login-service';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController, MenuController } from 'ionic-angular';
 import { FormBuilder } from '@angular/forms';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -34,6 +34,7 @@ export class LoginPage {
         private requestOptions: RequestOptions,
         private loadingController:LoadingController,
         private alertController:AlertController,
+        private menuCtrl: MenuController
     ) {
 
         this.loginForm = formBuilder.group({
@@ -98,5 +99,8 @@ export class LoginPage {
         this.cookieService.put("refreshToken", response.refresh_token);
     }
 
+    ionViewWillEnter() {
+        this.menuCtrl.enable(false);
+        }
 
 }

@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RequestOptions } from '@angular/http';
 import { CookieService } from 'angular2-cookie/core';
 import { LoginPage } from './../pages/login/login';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, NgZone } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +22,7 @@ import { ContactPage } from './../pages/contact/contact';
 export class ComponentInicial {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = LoginPage;
-  //usuarioOnLine = new Array<any>();
+  usuarioOnLine = new Array<any>();
 
   constructor(
     public platform: Platform,
@@ -36,7 +36,9 @@ export class ComponentInicial {
 
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
-      //this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
+      
+      this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));   
+
       this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
@@ -52,7 +54,8 @@ export class ComponentInicial {
     });
   }
 
-  doRefresh(event) {
+  public doRefresh(event) {
+    this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
     console.log('Begin async operation');
 
     setTimeout(() => {
@@ -61,6 +64,36 @@ export class ComponentInicial {
     }, 2000);
   }
 
- 
+  public logout() {
+    this.cookieService.removeAll();
+    this.requestOptions.headers.set('Authorization', "Bearer ");
+    this.nav.setRoot(LoginPage);
+
+  }
+
+  pushPage() {
+    this.nav.setRoot(ConsultaPage);
+  }
+
+  doClickConsulta() {
+    this.nav.setRoot(ConsultaPage);
+  }
+
+  doClickPerfil() {
+    this.nav.setRoot(PerfilPage);
+  }
+
+  doClickAbout() {
+    this.nav.setRoot(AboutPage);
+  }
+
+  doClickContact() {
+    this.nav.setRoot(ContactPage);
+  }
+
+  doClickHome() {
+    this.nav.setRoot(HomePage);
+  }
+
 
 }

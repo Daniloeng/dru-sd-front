@@ -69,4 +69,11 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     DruServiceProvider
   ]
 })
-export class AppModule { }
+export class AppModule { 
+  /*private usuarioOnLine = new Array<any>();
+
+  setUsuarioOnline (usuario:any){
+    this.usuarioOnLine = usuario;
+  }*/
+
+}
