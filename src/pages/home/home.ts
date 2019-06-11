@@ -3,7 +3,7 @@ import { ComponentInicial } from './../../app/app.component';
 import { LoginPage } from './../login/login';
 import { CookieService } from 'angular2-cookie/core';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { ConsultaPage } from './../consulta/consulta';
 import { PerfilPage } from './../perfil/perfil';
 import { AboutPage } from './../about/about';
