@@ -11,15 +11,17 @@
 
       <p>
         <font color="white">
-        <b>fulano</b><br>
-        Fulano de Tal<br>
-        fulano@fulanodetal.com.br
-        </font>
+          <b>On line:</b><br>
+          {{usuarioOnLine.email}}<br>
+          </font>
       </p>
 
     </div>
 
-
+    <!-- Default Refresher -->
+      <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
 
     <ion-list no-padding no-lines class="fundo-branco">
 
