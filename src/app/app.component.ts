@@ -22,7 +22,7 @@ import { ContactPage } from './../pages/contact/contact';
 export class ComponentInicial {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = LoginPage;
-  usuarioOnLine = new Array<any>();
+  //usuarioOnLine = new Array<any>();
 
   constructor(
     public platform: Platform,
@@ -36,7 +36,7 @@ export class ComponentInicial {
 
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
-      this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
+      //this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
       this.rootPage = HomePage;
     } else {
       this.rootPage = LoginPage;
@@ -61,35 +61,6 @@ export class ComponentInicial {
     }, 2000);
   }
 
-    logout() {
-      this.cookieService.removeAll();
-      this.requestOptions.headers.set('Authorization', "Bearer ");
-      this.nav.setRoot(LoginPage);
-
-    }
-
-
-    doClickConsulta() {
-      this.nav.setRoot(ConsultaPage);
-    }
-
-
-    doClickHome() {
-      this.nav.setRoot(HomePage);
-    }
-
-    doClickPerfil() {
-      this.nav.setRoot(PerfilPage);
-    }
-
-    doClickAbout() {
-      this.nav.setRoot(AboutPage);
-    }
-
-    doClickContact() {
-      this.nav.setRoot(ContactPage);
-    }
-
-
+ 
 
 }

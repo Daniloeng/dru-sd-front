@@ -14,9 +14,12 @@ import { ContactPage } from './../contact/contact';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  usuarioOnLine = new Array<any>();
 
   constructor(public navCtrl: NavController, public cookieService: CookieService,
      public requestOptions:RequestOptions) {
+
+      this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
   }
 
   public logout() {
@@ -45,5 +48,14 @@ export class HomePage {
   doClickContact() {
     this.navCtrl.setRoot(ContactPage);
   }
+
+  doClickHome() {
+    this.navCtrl.setRoot(HomePage);
+  }
+
+
+
+
+
 
 }
