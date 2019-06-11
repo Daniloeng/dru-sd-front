@@ -3,7 +3,7 @@ import { ComponentInicial } from './../../app/app.component';
 import { LoginPage } from './../login/login';
 import { CookieService } from 'angular2-cookie/core';
 import { Component } from '@angular/core';
-import { NavController, App } from 'ionic-angular';
+import { NavController, App , MenuController} from 'ionic-angular';
 import { ConsultaPage } from './../consulta/consulta';
 import { PerfilPage } from './../perfil/perfil';
 import { AboutPage } from './../about/about';
@@ -17,7 +17,7 @@ export class HomePage {
   usuarioOnLine = new Array<any>();
 
   constructor(public navCtrl: NavController, public cookieService: CookieService,
-     public requestOptions:RequestOptions) {
+     public requestOptions:RequestOptions, private menuCtrl: MenuController) {
 
       this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
   }
@@ -54,7 +54,9 @@ export class HomePage {
   }
 
 
-
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true);
+    }
 
 
 
