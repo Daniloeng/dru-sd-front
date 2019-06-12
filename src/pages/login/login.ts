@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController, MenuController } from 'ionic-angular';
 import { FormBuilder } from '@angular/forms';
 import { CookieService } from 'angular2-cookie/core';
+import { Events } from 'ionic-angular';
 
 /**
  * Generated class for the LoginPage page.
@@ -22,8 +23,7 @@ import { CookieService } from 'angular2-cookie/core';
 export class LoginPage {
     public loginForm;
     loading: any;
-    usuarioOnLine = new Array<any>();
-
+    
     constructor(
         public navCtrl: NavController,
         public navParams: NavParams,
@@ -34,7 +34,8 @@ export class LoginPage {
         private requestOptions: RequestOptions,
         private loadingController:LoadingController,
         private alertController:AlertController,
-        private menuCtrl: MenuController
+        private menuCtrl: MenuController,
+        public events: Events
     ) {
 
         this.loginForm = formBuilder.group({
@@ -89,7 +90,7 @@ export class LoginPage {
 
     public redirectPage(res: any) {
         this.cookieService.putObject("usuarioAtual", res);
-        this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
+        this.events.publish('user:actual', JSON.parse(this.cookieService.get("usuarioAtual")));
         this.navCtrl.setRoot(HomePage);
     }
 

@@ -14,7 +14,7 @@ import { HomePage } from './../pages/home/home';
 import { PerfilPage } from './../pages/perfil/perfil';
 import { AboutPage } from './../pages/about/about';
 import { ContactPage } from './../pages/contact/contact';
-
+import { Events } from 'ionic-angular';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,15 +29,19 @@ export class ComponentInicial {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     public requestOptions: RequestOptions,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    public events: Events
   ) {
 
     this.initializeApp()
 
+    this.events.subscribe('user:actual', (user) => { 
+      this.usuarioOnLine = user });
+
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
       
-      this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));   
+      //this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));   
 
       this.rootPage = HomePage;
     } else {
