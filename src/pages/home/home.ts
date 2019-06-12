@@ -9,17 +9,17 @@ import { PerfilPage } from './../perfil/perfil';
 import { AboutPage } from './../about/about';
 import { ContactPage } from './../contact/contact';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  usuarioOnLine = new Array<any>();
-
+  
   constructor(public navCtrl: NavController, public cookieService: CookieService,
      public requestOptions:RequestOptions, private menuCtrl: MenuController) {
 
-      this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
+      
   }
 
   public logout() {
