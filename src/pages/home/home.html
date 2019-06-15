@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar  color="primary">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -11,19 +11,53 @@
 
 
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
-
-<ion-content padding>
-
-  <ion-card>
-    <ion-card-content>
-      <ion-card-title>
-        <h1><b>Projeto de Documento Único</b></h1>
-        </ion-card-title>
-      <p>
-        Sistema multiplataforma que permite a todos que possuem acesso realizar consultas detalhadas de documentos.
-      </p>
-    </ion-card-content>
-  </ion-card>
-
-
+<ion-content padding >
+  <ion-label>
+    <h2>Informações do seu DRU</h2>
+  </ion-label>
+  <ion-list *ngFor="let consulta of registros">   
+    <ion-item >
+      <ion-icon name="name" slot="start"></ion-icon>
+      <ion-label>
+        <p>Nome:</p>
+        <h2>{{consulta.nome}}</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="name" slot="start"></ion-icon>
+      <ion-label>
+        <p>CPF:</p>
+        <h2>{{consulta.cpf}}</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="name" slot="start"></ion-icon>
+      <ion-label>
+        <p>E-mail:</p>
+        <h2>{{consulta.email}}</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="phone" slot="start"></ion-icon>
+      <ion-label>
+        <p>Telefone:</p>
+        <h2>{{consulta.telefone}}</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-label>
+        <p>Cidade:</p>
+        <h2>{{consulta.cidade}} - {{consulta.uf}}</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="name" slot="start"></ion-icon>
+      <ion-label>
+        <p>CEP:</p>
+        <h2>{{consulta.endereco}}</h2>
+      </ion-label>
+    </ion-item>
+    <p></p>
+  </ion-list>
 </ion-content>

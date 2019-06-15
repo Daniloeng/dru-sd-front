@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Utils } from './../../entity/Utils';
 
@@ -12,18 +12,20 @@ import { Utils } from './../../entity/Utils';
 @Injectable()
 export class DruServiceProvider {
 
-  public druUrl: string;
+  private druUrl: string;
+  public handleError: any;
 
-  constructor(public http: Http) {
+  constructor(public http: HttpClient) {
     this.druUrl = Utils.getUrlBackend() + "dru/";
   }
 
   public getDRUbyCPF(cpf: any) {
-
+    console.log((this.druUrl));
     return this.http.get(this.druUrl + cpf);
   }
 
   public getDRUList() {
+    console.log((this.druUrl));
     return this.http.get(this.druUrl);
   }
 }
