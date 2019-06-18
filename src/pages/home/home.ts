@@ -1,4 +1,5 @@
 import { RequestOptions } from '@angular/http';
+import { ComponentInicial } from './../../app/app.component';
 import { LoginPage } from './../login/login';
 import { CookieService } from 'angular2-cookie/core';
 import { Component } from '@angular/core';
@@ -8,6 +9,7 @@ import { PerfilPage } from './../perfil/perfil';
 import { AboutPage } from './../about/about';
 import { ContactPage } from './../contact/contact';
 import { DruServiceProvider } from '../../providers/dru-service/dru-service';
+import { DRU } from '../../entity/dru';
 
 
 @Component({
@@ -16,34 +18,33 @@ import { DruServiceProvider } from '../../providers/dru-service/dru-service';
   providers: [DruServiceProvider]
 })
 export class HomePage {
-  public usuarioOnLine = new Array<any>();
 
-  public registros: any;
-  private loading:any;
-  public hasFilter: boolean = false;
+  public registros: any = Object.keys;
   public noFilter: any;
-  public mostraSearchbar: boolean = false;
-  public termoPesquisa: any;
+  public hasFilter: boolean = false;
+  public usuario_nome: string;
+  public usuario_email: string;
+  public usuario_endereco: string;
+  public usuario_cpf: string;
+  public usuario_telefone: string;
+  public usuario_uf: string;
+  public usuario_cidade: string;
+  public usuario_id: string;
+  public usuario_sexo: string;
+  private loading: any;
+  private usuarioLogado: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public cookieService: CookieService,
-    public requestOptions: RequestOptions,
-    private menuCtrl: MenuController,
-    public druService: DruServiceProvider,
-    public loadingController: LoadingController) {
-    this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
-    this.loading = loadingController.create({ content: 'Aguarde...', showBackdrop: true, spinner: 'bubbles' });
+  constructor(public navCtrl: NavController, public cookieService: CookieService,
+    public requestOptions: RequestOptions, private menuCtrl: MenuController,
+    public druService: DruServiceProvider, public loadingController: LoadingController) {
+    this.loading = this.loadingController.create({ content: 'Aguarde...', showBackdrop: true, spinner: 'bubbles' });
   }
 
   public logout() {
     this.cookieService.removeAll();
     this.requestOptions.headers.set('Authorization', "Bearer ");
     this.navCtrl.setRoot(LoginPage);
-  }
 
-  ionViewDidLoad() {
-    this.usuarioOnLine;
   }
 
   pushPage() {
@@ -71,27 +72,31 @@ export class HomePage {
   }
 
   ionViewWillEnter() {
+    this.menuCtrl.enable(true);
     this.registros = this.noFilter;
     this.loading.present();
+    
+    this.usuarioLogado = JSON.parse(this.cookieService.get("usuarioAtual"));
 
-    this.druService.getDRUbyCPF("295.212.660-74").subscribe(
-      response => {this.registros = response;this.loading.dismiss();this.noFilter = this.registros;this.hasFilter = false;},
-      error => {this.loading.dismiss();console.warn(error);}
+    this.druService.getDRUbyEmail(this.usuarioLogado.email).subscribe(
+      response => {
+        this.registros = response;
+
+        this.usuario_nome     = this.registros.nome;
+        this.usuario_email    = this.registros.email;
+        this.usuario_cidade   = this.registros.cidade;
+        this.usuario_cpf      = this.registros.cpf;
+        this.usuario_endereco = this.registros.endereco;
+        this.usuario_id       = this.registros.id;
+        this.usuario_sexo     = this.registros.sexo;
+        this.usuario_telefone = this.registros.telefone;
+        this.usuario_uf       = this.registros.uf;
+
+        this.loading.dismiss();
+      },
+      error => {
+        this.loading.dismiss();
+      }
     );
-  }
-
-  filtrarDru() {
-    this.hasFilter = false;
-    this.registros = this.noFilter.filter((dru) => {
-      return (
-        dru.nome.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) ||
-        dru.cpf.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) ||
-        dru.email.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) ||
-        dru.telefone.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) ||
-        dru.cidade.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) ||
-        dru.uf.toLowerCase().indexOf(this.termoPesquisa.toLowerCase()) ||
-        dru.endereco.toLowerCase().indexOf(this.termoPesquisa.toLowerCase())
-      );
-    });
   }
 }
