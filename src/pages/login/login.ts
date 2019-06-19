@@ -83,7 +83,7 @@ export class LoginPage {
             title: "Login",
             message: "E-mail ou senha incorretos!",
             buttons:[{text:"Fechar"}]
-        });
+        }); 
 
         msg.present();
     }

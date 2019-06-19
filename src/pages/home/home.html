@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar  color="primary">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -13,7 +13,7 @@
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
 
 <ion-content padding>
-
+  <!--
   <ion-card>
     <ion-card-content>
       <ion-card-title>
@@ -24,6 +24,47 @@
       </p>
     </ion-card-content>
   </ion-card>
+  -->
 
-
+  <div>
+    <ion-label class="borda">
+      <h2>Informações do DRU</h2>
+    </ion-label>
+    <form>
+      <ion-item>
+        <ion-icon name="name" slot="start"></ion-icon>
+        <ion-label floating>Nome:</ion-label>
+        <ion-input outline type="text" value="{{usuario_nome}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Telefone:</ion-label>
+        <ion-input outline type="text" value="{{usuario_telefone}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>E-mail:</ion-label>
+        <ion-input outline type="email" value="{{usuario_email}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>CPF:</ion-label>
+        <ion-input outline type="text" value="{{usuario_cpf}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Cidade:</ion-label>
+        <ion-input outline type="text" value="{{usuario_cidade}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Estado:</ion-label>
+        <ion-input outline type="text" value="{{usuario_uf}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>CEP:</ion-label>
+        <ion-input outline type="text" value="{{usuario_endereco}}"></ion-input>
+      </ion-item>
+      <br>
+      <button ion-button icon-start>
+        <ion-icon name="create"></ion-icon>
+        Atualizar
+      </button>
+    </form>
+  </div>
 </ion-content>
