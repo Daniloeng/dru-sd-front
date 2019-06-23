@@ -15,6 +15,8 @@ import { PerfilPage } from './../pages/perfil/perfil';
 import { AboutPage } from './../pages/about/about';
 import { ContactPage } from './../pages/contact/contact';
 import { SolicitacaoPage } from './../pages/solicitacao/solicitacao';
+import { MinhaSolicitacaoPage } from './../pages/minhasolicitacao/minhasolicitacao';
+
 import { Events } from 'ionic-angular';
 
 @Component({
@@ -102,7 +104,7 @@ export class ComponentInicial {
 
 
   doClickMinhasSolicitacoes() {
-    this.nav.setRoot(SolicitacaoPage);
+    this.nav.setRoot(MinhaSolicitacaoPage);
   }
 
   

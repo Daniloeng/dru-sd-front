@@ -15,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ConsultaPage } from '../pages/consulta/consulta';
 import { ContactPage } from '../pages/contact/contact';
 import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
+import { MinhaSolicitacaoPage } from '../pages/minhasolicitacao/minhasolicitacao';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,7 +36,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     TabsPage,
     ConsultaPage,
     ContactPage,
-    SolicitacaoPage
+    SolicitacaoPage,
+    MinhaSolicitacaoPage
 
   ],
   imports: [
@@ -55,7 +57,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     TabsPage,
     ConsultaPage,
     ContactPage,
-    SolicitacaoPage
+    SolicitacaoPage,
+    MinhaSolicitacaoPage
 
   ],
   providers: [
