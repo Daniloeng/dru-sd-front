@@ -93,6 +93,8 @@ export class HomePage {
         this.usuario_uf       = this.registros.uf;
 
         this.loading.dismiss();
+
+        console.log(this.usuarioLogado);
       },
       error => {
         this.loading.dismiss();

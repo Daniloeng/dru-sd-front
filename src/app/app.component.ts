@@ -14,6 +14,7 @@ import { HomePage } from './../pages/home/home';
 import { PerfilPage } from './../pages/perfil/perfil';
 import { AboutPage } from './../pages/about/about';
 import { ContactPage } from './../pages/contact/contact';
+import { SolicitacaoPage } from './../pages/solicitacao/solicitacao';
 import { Events } from 'ionic-angular';
 
 @Component({
@@ -97,6 +98,26 @@ export class ComponentInicial {
 
   doClickHome() {
     this.nav.setRoot(HomePage);
+  }
+
+
+  doClickMinhasSolicitacoes() {
+    this.nav.setRoot(SolicitacaoPage);
+  }
+
+  
+  doClickSolicitacoesNovas() {
+    this.nav.setRoot(SolicitacaoPage, {situacao: "NOVA"});
+  }
+
+ 
+  doClickSolicitacoesAutorizadas() {
+    this.nav.setRoot(SolicitacaoPage, {situacao: "AUTORIZADA"});
+  }
+
+
+  doClickSolicitacoesNegadas() {
+    this.nav.setRoot(SolicitacaoPage, {situacao: "NEGADA"});
   }
 
 

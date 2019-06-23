@@ -32,41 +32,52 @@
         </button>
   
         <button ion-item menuClose (click)="doClickConsulta()">
-          <ion-icon name="search" color="primary" item-left></ion-icon>
+          <ion-icon name="search" item-left></ion-icon>
           Consultar
         </button>
   
         <button ion-item menuClose (click)="doClickConsulta()">
-          <ion-icon name="create" color="primary" item-left></ion-icon>
+          <ion-icon name="create" item-left></ion-icon>
           Alterar
         </button>
   
+       
+        <button ion-item menuClose (click)="doClickMinhasSolicitacoes()">
+          <ion-icon name="pricetags" color="primary" item-left></ion-icon>
+          Minhas solicitações
+        </button>
   
+ 
   
-        <!-- <br> -->
+        <br>
+        
         <ion-item-divider>
-          <!-- <ion-label>
-            Solicitados pra Mim
-          </ion-label> -->
+            <h2>Solicitaram pra mim</h2>
         </ion-item-divider>
   
-        <button ion-item menuClose (click)="doClickConsulta()">
+         
+        <button ion-item menuClose (click)="doClickSolicitacoesNovas()">
           <ion-icon name="pricetag" item-left></ion-icon>
-          Solicitar Liberação
+          Analisar
         </button>
   
-        <button ion-item menuClose (click)="doClickConsulta()">
-          <ion-icon name="pricetags" color="secondary" item-left></ion-icon>
-          Liberar Consulta
+
+        <button ion-item menuClose (click)="doClickSolicitacoesAutorizadas()">
+          <ion-icon name="thumbs-up" color="secondary" item-left></ion-icon>
+          Autorizadas
+        </button>
+  
+        <button ion-item menuClose (click)="doClickSolicitacoesNegadas()">
+          <ion-icon name="thumbs-down" color="danger" item-left></ion-icon>
+          Negadas
         </button>
   
   
-        <!-- <br> -->
+       
         <ion-item-divider>
-          <!-- <ion-label>
-            Sistema
-          </ion-label> -->
         </ion-item-divider>
+
+        <br>
   
         <button ion-item menuClose (click)="doClickPerfil()">
           <ion-icon name="people" color="primary" item-left></ion-icon>

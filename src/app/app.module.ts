@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ConsultaPage } from '../pages/consulta/consulta';
 import { ContactPage } from '../pages/contact/contact';
+import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +34,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     HomePage,
     TabsPage,
     ConsultaPage,
-    ContactPage
+    ContactPage,
+    SolicitacaoPage
 
   ],
   imports: [
@@ -52,7 +54,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     HomePage,
     TabsPage,
     ConsultaPage,
-    ContactPage
+    ContactPage,
+    SolicitacaoPage
 
   ],
   providers: [
@@ -66,7 +69,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     ,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     LoginServiceProvider,
-    DruServiceProvider
+    DruServiceProvider,
+    
   ]
 })
 export class AppModule { 
