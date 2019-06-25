@@ -44,20 +44,7 @@ export class ConsultaPage {
     this.registros = this.noFilter;
     this.loading.present();
 
-    this.consultaService.getRegistros().subscribe(
-      response =>{
-        this.registros = response;
-        this.loading.dismiss();
 
-        this.noFilter = this.registros;
-        this.hasFilter = false;
-
-      },
-      error=> {
-        this.loading.dismiss();
-        console.warn(error);
-      }
-    );
 
   }
 

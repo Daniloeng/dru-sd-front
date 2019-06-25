@@ -1,0 +1,45 @@
+<!--
+  Generated template for the MySolicitationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Minhas Solicitações Aprovadas
+    </ion-title>
+
+    <ion-buttons end>
+          <button ion-button icon-only (click)="alternarSearchbar()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+      <ion-list>
+          <ion-item no-padding  *ngFor="let consulta of registros">
+
+            <h3><b>Liberação pedida por: {{consulta.AuthName}}</b></h3>
+            <h4>{{consulta.AuthCPF}}</h4>
+            <h4>{{consulta.AuthEmail}}</h4>
+
+            <div>
+              <h3><b>Liberação enviada para: {{consulta.ReceivName}}</b></h3>
+              <h4>{{consulta.ReceivCPF}}</h4>
+            </div>
+
+          </ion-item>
+      </ion-list>
+  </ion-item>
+</ion-content>
