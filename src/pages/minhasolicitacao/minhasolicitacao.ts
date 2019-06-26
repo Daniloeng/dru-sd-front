@@ -66,11 +66,6 @@ export class MinhaSolicitacaoPage {
         this.solicitacoes = response;
         this.loading.dismiss();
 
-        console.log("Minhas Solicitacoes = ");
-        console.log(this.solicitacoes);
-
-
-
         this.noFilter = this.solicitacoes;
         this.hasFilter = false;
       },

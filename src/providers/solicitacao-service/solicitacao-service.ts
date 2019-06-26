@@ -16,6 +16,8 @@ export class SolicitacaoServiceProvider {
     private urlSolicitacoesAutorizadas: string;
     private urlSolicitacoesNegadas: string;
 
+    private urlSolicitarConsulta: string;
+
     private urlAutorizarConsulta: string;
     private urlNegarConsulta: string;
 
@@ -53,5 +55,34 @@ export class SolicitacaoServiceProvider {
         return this.http.get(this.urlSolicitacoesNegadas);
     }
 
+  
+    public geraSolicitacao(solicitacao: Solicitacao) {
+
+
+        this.urlSolicitarConsulta = this.solicitacaoUrl + 
+                                    solicitacao.solicitanteCpf + "/" +
+                                    solicitacao.solicitadoCpf +  "/criar/"
+        return this.http.get(this.urlSolicitarConsulta);
+
+    }
+
+
+
+
+
+    
+    public getNegarSolicitacao(id: string) {
+        this.urlNegarConsulta = this.solicitacaoUrl + id + "/negar/";
+        return this.http.get(this.urlNegarConsulta);
+    }
+
+    
+    
+    public getAutorizarSolicitacao(id: string) {
+        this.urlAutorizarConsulta = this.solicitacaoUrl + id + "/aprovar/";
+        return this.http.get(this.urlAutorizarConsulta);
+    }
+
+ 
  
 }

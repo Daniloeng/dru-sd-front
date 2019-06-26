@@ -14,15 +14,8 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ConsultaPage } from '../pages/consulta/consulta';
 import { ContactPage } from '../pages/contact/contact';
-
 import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 import { MinhaSolicitacaoPage } from '../pages/minhasolicitacao/minhasolicitacao';
-
-import { AprovalPage } from '../pages/aproval/aproval';
-
-import { MySolicitationPage } from './../pages/my-solicitation/my-solicitation';
-import { MyAprovalPage } from './../pages/my-aproval/my-aproval';
-
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +23,7 @@ import { LoginServiceProvider } from '../providers/login-service/login-service';
 import { XHRBackend, RequestOptions } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DruServiceProvider } from '../providers/dru-service/dru-service';
-
+  
 
 
 
@@ -43,19 +36,12 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     TabsPage,
     ConsultaPage,
     ContactPage,
-
     SolicitacaoPage,
-    MinhaSolicitacaoPage,
-
-    AprovalPage,
-   
-    MyAprovalPage,
-    MySolicitationPage,
-
+    MinhaSolicitacaoPage
 
   ],
   imports: [
-
+  
   BrowserModule,
     HttpClientModule,
     HttpModule,
@@ -71,15 +57,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     TabsPage,
     ConsultaPage,
     ContactPage,
-
     SolicitacaoPage,
-    MinhaSolicitacaoPage,
-
-    AprovalPage,
- 
-    MyAprovalPage,
-    MySolicitationPage,
-
+    MinhaSolicitacaoPage
 
   ],
   providers: [
@@ -97,7 +76,7 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     
   ]
 })
-export class AppModule {
+export class AppModule { 
   /*private usuarioOnLine = new Array<any>();
 
   setUsuarioOnline (usuario:any){

@@ -19,7 +19,7 @@ export class Solicitacao{
 
 
     constructor() {
-        this.id  = "";
+        this.id  = null;
 
         this.solicitanteCpf   = "";
         this.solicitanteNome = "";
@@ -33,8 +33,8 @@ export class Solicitacao{
         this.expiraEm   = null;
         this.modificacaoEm = null;
 
-        this.situacao = "";   
-        this.visualizado = "";    
+        this.situacao = "NOVA";   
+        this.visualizado = "N";    
     }
 
 }

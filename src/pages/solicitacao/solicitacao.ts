@@ -185,7 +185,11 @@ export class SolicitacaoPage {
       showCloseButton: true,
       closeButtonText: "FECHAR"
     });
-    toast.present();
+    if (this.mostraNova) {
+      toast.present();
+    }
+
+    //this.doSolicitacoesNovas();
 
   }
 
@@ -202,15 +206,16 @@ export class SolicitacaoPage {
       closeButtonText: "FECHAR"
     });
     toast.present();
+    //this.doSolicitacoesNovas();
 
   }
+
 
 
   tornarFalsaVariaveisMostrar() {
-    this.mostraNova = false;
-    this.mostraAutorizada = false;
     this.mostraNegada = false;
+    this.mostraAutorizada = false;
+    this.mostraNova = false;
   }
-
 
 }

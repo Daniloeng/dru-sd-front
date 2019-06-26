@@ -16,9 +16,7 @@ import { AboutPage } from './../pages/about/about';
 import { ContactPage } from './../pages/contact/contact';
 import { SolicitacaoPage } from './../pages/solicitacao/solicitacao';
 import { MinhaSolicitacaoPage } from './../pages/minhasolicitacao/minhasolicitacao';
-import { AprovalPage } from './../pages/aproval/aproval';
-import { MySolicitationPage } from './../pages/my-solicitation/my-solicitation';
-import { MyAprovalPage } from './../pages/my-aproval/my-aproval';
+
 import { Events } from 'ionic-angular';
 
 @Component({
@@ -40,13 +38,13 @@ export class ComponentInicial {
 
     this.initializeApp()
 
-    this.events.subscribe('user:actual', (user) => {
+    this.events.subscribe('user:actual', (user) => { 
       this.usuarioOnLine = user });
 
     if (this.cookieService.getObject("usuarioAtual")) {
       this.requestOptions.headers.set('Authorization', "Bearer " + this.cookieService.get("accessToken"));
-
-      //this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));
+      
+      //this.usuarioOnLine = JSON.parse(this.cookieService.get("usuarioAtual"));   
 
       this.rootPage = HomePage;
     } else {
@@ -104,21 +102,6 @@ export class ComponentInicial {
     this.nav.setRoot(HomePage);
   }
 
-  doClickSolicitacao() {
-    this.nav.setRoot(SolicitacaoPage);
-  }
-
-  doClickAprovacao() {
-    this.nav.setRoot(AprovalPage);
-  }
-
-  doClickMySolicitacao() {
-    this.nav.setRoot(MySolicitationPage);
-  }
-
-  doClickMyAprovacao() {
-    this.nav.setRoot(MyAprovalPage);
-  }
 
   doClickMinhasSolicitacoes() {
     this.nav.setRoot(MinhaSolicitacaoPage);
