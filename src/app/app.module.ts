@@ -19,7 +19,7 @@ import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 import { MinhaSolicitacaoPage } from '../pages/minhasolicitacao/minhasolicitacao';
 
 import { AprovalPage } from '../pages/aproval/aproval';
-import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
+
 import { MySolicitationPage } from './../pages/my-solicitation/my-solicitation';
 import { MyAprovalPage } from './../pages/my-aproval/my-aproval';
 
@@ -45,7 +45,7 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     ContactPage,
 
     SolicitacaoPage,
-    MinhaSolicitacaoPage
+    MinhaSolicitacaoPage,
 
     AprovalPage,
    
@@ -73,7 +73,7 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     ContactPage,
 
     SolicitacaoPage,
-    MinhaSolicitacaoPage
+    MinhaSolicitacaoPage,
 
     AprovalPage,
  
