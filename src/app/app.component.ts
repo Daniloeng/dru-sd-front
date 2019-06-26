@@ -15,6 +15,7 @@ import { PerfilPage } from './../pages/perfil/perfil';
 import { AboutPage } from './../pages/about/about';
 import { ContactPage } from './../pages/contact/contact';
 import { SolicitacaoPage } from './../pages/solicitacao/solicitacao';
+import { MinhaSolicitacaoPage } from './../pages/minhasolicitacao/minhasolicitacao';
 import { AprovalPage } from './../pages/aproval/aproval';
 import { MySolicitationPage } from './../pages/my-solicitation/my-solicitation';
 import { MyAprovalPage } from './../pages/my-aproval/my-aproval';
@@ -118,5 +119,25 @@ export class ComponentInicial {
   doClickMyAprovacao() {
     this.nav.setRoot(MyAprovalPage);
   }
+
+  doClickMinhasSolicitacoes() {
+    this.nav.setRoot(MinhaSolicitacaoPage);
+  }
+
+  
+  doClickSolicitacoesNovas() {
+    this.nav.setRoot(SolicitacaoPage, {situacao: "NOVA"});
+  }
+
+ 
+  doClickSolicitacoesAutorizadas() {
+    this.nav.setRoot(SolicitacaoPage, {situacao: "AUTORIZADA"});
+  }
+
+
+  doClickSolicitacoesNegadas() {
+    this.nav.setRoot(SolicitacaoPage, {situacao: "NEGADA"});
+  }
+
 
 }

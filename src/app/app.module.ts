@@ -14,10 +14,15 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ConsultaPage } from '../pages/consulta/consulta';
 import { ContactPage } from '../pages/contact/contact';
+
+import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
+import { MinhaSolicitacaoPage } from '../pages/minhasolicitacao/minhasolicitacao';
+
 import { AprovalPage } from '../pages/aproval/aproval';
 import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 import { MySolicitationPage } from './../pages/my-solicitation/my-solicitation';
 import { MyAprovalPage } from './../pages/my-aproval/my-aproval';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,10 +43,15 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     TabsPage,
     ConsultaPage,
     ContactPage,
-    AprovalPage,
+
     SolicitacaoPage,
+    MinhaSolicitacaoPage
+
+    AprovalPage,
+   
     MyAprovalPage,
     MySolicitationPage,
+
 
   ],
   imports: [
@@ -61,10 +71,15 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     TabsPage,
     ConsultaPage,
     ContactPage,
-    AprovalPage,
+
     SolicitacaoPage,
+    MinhaSolicitacaoPage
+
+    AprovalPage,
+ 
     MyAprovalPage,
     MySolicitationPage,
+
 
   ],
   providers: [
@@ -78,7 +93,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     ,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     LoginServiceProvider,
-    DruServiceProvider
+    DruServiceProvider,
+    
   ]
 })
 export class AppModule {
