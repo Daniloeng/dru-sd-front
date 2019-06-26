@@ -47,6 +47,16 @@ export class HomePage {
 
   }
 
+  public atualizaDados(nome,telefone,email,cpf,cidade,estado,cep){
+    let msg = this.alertController.create({
+        title: "Login",
+        message: "Dados passados: " + nome,
+        buttons:[{text:"Fechar"}]
+    });
+
+    msg.present();
+  }
+
   pushPage() {
     this.navCtrl.setRoot(ConsultaPage);
   }
@@ -75,7 +85,7 @@ export class HomePage {
     this.menuCtrl.enable(true);
     this.registros = this.noFilter;
     this.loading.present();
-    
+
     this.usuarioLogado = JSON.parse(this.cookieService.get("usuarioAtual"));
 
     this.druService.getDRUbyEmail(this.usuarioLogado.email).subscribe(
