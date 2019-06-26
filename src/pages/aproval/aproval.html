@@ -1,0 +1,40 @@
+
+<ion-header>
+
+  <ion-navbar  color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Liberar Consulta
+    </ion-title>
+
+    <ion-buttons end>
+          <button ion-button icon-only (click)="alternarSearchbar()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <b>Pagina para liberação de consulta de terceiros</b>
+  <ion-item>
+      <ion-list>
+          <ion-item no-padding  *ngFor="let consulta of registros">
+
+            <h3><b>Liberação pedida por: {{consulta.AuthName}}</b></h3>
+            <h4>{{consulta.AuthCPF}}</h4>
+            <h4>{{consulta.AuthEmail}}</h4>
+
+            <button name="yes_button" class="medio" color="primary" item-right (click)="yesClick(consulta.AuthCPF,consulta.ReceivCPF)">Aceitar</button>
+            <button name="no_button" class="medio" color="primary" item-right (click)="noClick(consulta.AuthCPF,consulta.ReceivCPF)">Recusar</button>
+
+          </ion-item>
+      </ion-list>
+  </ion-item>
+</ion-content>
