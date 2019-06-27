@@ -58,28 +58,28 @@ export class SolicitacaoServiceProvider {
   
     public geraSolicitacao(solicitacao: Solicitacao) {
 
-
-        this.urlSolicitarConsulta = this.solicitacaoUrl + 
+        this.urlSolicitarConsulta = this.solicitacaoUrl + "criar/" +
                                     solicitacao.solicitanteCpf + "/" +
-                                    solicitacao.solicitadoCpf +  "/criar/"
+                                    solicitacao.solicitanteNome + "/" +
+                                    solicitacao.solicitanteEmail + "/" +
+                                    solicitacao.solicitadoCpf +  "/" +
+                                    solicitacao.solicitadoNome +  "/" +
+                                    solicitacao.solicitadoEmail +  "/";
+
         return this.http.get(this.urlSolicitarConsulta);
-
     }
-
-
-
 
 
     
     public getNegarSolicitacao(id: string) {
-        this.urlNegarConsulta = this.solicitacaoUrl + id + "/negar/";
+        this.urlNegarConsulta = this.solicitacaoUrl + "negar/" + id + "/";
         return this.http.get(this.urlNegarConsulta);
     }
 
     
     
     public getAutorizarSolicitacao(id: string) {
-        this.urlAutorizarConsulta = this.solicitacaoUrl + id + "/aprovar/";
+        this.urlAutorizarConsulta = this.solicitacaoUrl + "aprovar/" + id + "/";
         return this.http.get(this.urlAutorizarConsulta);
     }
 
