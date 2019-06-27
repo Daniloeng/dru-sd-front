@@ -32,10 +32,13 @@
       <ion-icon padding name="thumbs-up" class="medio" color="cinza-claro" item-left *ngIf="mostraAutorizada">
       </ion-icon>
       <ion-icon padding name="thumbs-down" class="medio" color="cinza-claro" item-left *ngIf="mostraNegada"></ion-icon>
-
+ 
       <h3><b>{{solicitacao.solicitanteNome}}</b></h3>
       <h4>{{solicitacao.solicitanteCpf}}</h4>
       <h4>{{solicitacao.solicitanteEmail}}</h4>
+      <h4>Solicitado em: {{solicitacao.solicitadoEm | date: 'dd/MM/yyyy hh:mm:ss'}}</h4>
+      <span *ngIf="mostraAutorizada"><h4>Autorizada em: <b>{{solicitacao.modificacaoEm | date: 'dd/MM/yyyy hh:mm:ss'}}</b></h4></span>
+      <span *ngIf="mostraNegada"><h4>Negada em: <b>{{solicitacao.modificacaoEm | date: 'dd/MM/yyyy hh:mm:ss'}}</b></h4></span>
 
       <ion-icon padding name="thumbs-up" class="medio" color="secondary" item-right
         (click)="autorizarConsulta(solicitacao)" *ngIf="mostraNova"></ion-icon>

@@ -27,15 +27,18 @@ export class ConsultaPage {
   public registros: any;
   public loading: any;
 
+
   public hasFilter: boolean = false;
   public noFilter: any;
 
   public mostraSearchbar: boolean = false;
   public termoPesquisa: any;
 
-  private usuarioLogado: any;
+  public usuarioLogado: any;
   public solicitacaoAtual: Solicitacao;
   public retorno: any;
+
+
 
 
   constructor(public navCtrl: NavController,
@@ -79,8 +82,6 @@ export class ConsultaPage {
 
   apresentarToast(consultado: DRU): void {
 
-    var retorno: any;
-
     this.usuarioLogado = JSON.parse(this.cookieService.get("usuarioAtual"));
     this.solicitacaoAtual = new Solicitacao();
 
@@ -92,25 +93,16 @@ export class ConsultaPage {
     this.solicitacaoAtual.solicitadoNome = consultado.nome;
     this.solicitacaoAtual.solicitadoEmail = consultado.email;
 
-    console.log("1A-solicitacaoAtual");
-    console.log(this.solicitacaoAtual);
+
 
     this.solicitacaoService.geraSolicitacao(this.solicitacaoAtual).subscribe(
       response => {
         this.retorno = response;
-        this.loading.dismiss();
-        console.log(this.retorno);
       },
       error => {
-        this.loading.dismiss();
+        console.warn(error);
       }
-    );        
-
-
-    console.log("2A-retorno");
-    console.log(retorno);
-
-
+    );
 
     let toast = this.toastCtrl.create({
       message: "Pedido enviado para " +  consultado.nome + " (" + consultado.email + ")",

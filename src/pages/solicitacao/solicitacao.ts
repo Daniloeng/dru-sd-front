@@ -44,6 +44,8 @@ export class SolicitacaoPage {
 
   public tituloToolBar: string = "Solicitação";
 
+  public retorno: any;
+
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -58,8 +60,8 @@ export class SolicitacaoPage {
 
     this.usuarioLogado = JSON.parse(this.cookieService.get("usuarioAtual"));
     this.usuario_cpf = this.usuarioLogado.cpf;
-
   }
+
 
   ionViewWillEnter() {
 
@@ -109,6 +111,8 @@ export class SolicitacaoPage {
 
 
 
+
+
   doSolicitacoesAprovadas() {
     this.solicitacoes = this.noFilter;
     this.loading.present();
@@ -130,6 +134,8 @@ export class SolicitacaoPage {
       }
     );
   }
+
+
 
 
   doSolicitacoesNegadas() {
@@ -171,34 +177,59 @@ export class SolicitacaoPage {
     });
   }
 
+
+
   alternarSearchbar() {
     this.mostraSearchbar = !this.mostraSearchbar;
   }
 
 
 
+
   autorizarConsulta(solicitacao: Solicitacao) {
 
+
+    this.solicitacaoService.getAutorizarSolicitacao(solicitacao.id).subscribe(
+      response => {
+        this.retorno = response;
+      },
+      error => {
+        console.warn(error);
+      }
+    );
+
+    const indice  = this.solicitacoes.indexOf(solicitacao);
+    this.solicitacoes.splice(indice, 1);
+    
     let toast = this.toastCtrl.create({
       message: "Autorizada consulta solicitada por " + solicitacao.solicitanteNome,
       duration: 6000,
       showCloseButton: true,
       closeButtonText: "FECHAR"
     });
-    if (this.mostraNova) {
-      toast.present();
-    }
 
-    //this.doSolicitacoesNovas();
+    toast.present();
+  
 
   }
 
 
 
 
-
   negarConsulta(solicitacao: Solicitacao) {
 
+    this.solicitacaoService.getSolicitacoesNegadas(solicitacao.id).subscribe(
+      response => {
+        this.retorno = response;
+      },
+      error => {
+        console.warn(error);
+      }
+    );
+
+    const indice  = this.solicitacoes.indexOf(solicitacao);
+    this.solicitacoes.splice(indice, 1);
+    
     let toast = this.toastCtrl.create({
       message: "Negada consulta solicitada por " + solicitacao.solicitanteNome,
       duration: 6000,
@@ -206,11 +237,9 @@ export class SolicitacaoPage {
       closeButtonText: "FECHAR"
     });
     toast.present();
-    //this.doSolicitacoesNovas();
-
   }
 
-
+  
 
   tornarFalsaVariaveisMostrar() {
     this.mostraNegada = false;
