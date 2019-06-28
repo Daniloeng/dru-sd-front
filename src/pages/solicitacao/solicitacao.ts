@@ -247,4 +247,33 @@ export class SolicitacaoPage {
     this.mostraNova = false;
   }
 
+
+
+
+
+  removerMinhaSolicitacao(solicitacao: Solicitacao) {
+
+    this.solicitacaoService.deletarMinhaSolicitacao(solicitacao.id).subscribe(
+      response => {
+        this.retorno = response;
+      },
+      error => {
+        console.warn(error);
+      }
+    );
+
+    const indice  = this.solicitacoes.indexOf(solicitacao);
+    this.solicitacoes.splice(indice, 1);
+    
+    let toast = this.toastCtrl.create({
+      message: "Deletada solicitacao feita por " + solicitacao.solicitanteNome,
+      duration: 6000,
+      showCloseButton: true,
+      closeButtonText: "FECHAR"
+    });
+    toast.present();
+  }
+
+
+
 }

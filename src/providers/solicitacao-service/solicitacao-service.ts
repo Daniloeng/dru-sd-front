@@ -21,6 +21,9 @@ export class SolicitacaoServiceProvider {
     private urlAutorizarConsulta: string;
     private urlNegarConsulta: string;
 
+    private urlDeletarMinhaSolicitacao: string;
+
+
 
     public handleError: any;
 
@@ -84,5 +87,10 @@ export class SolicitacaoServiceProvider {
     }
 
  
+    public deletarMinhaSolicitacao(id: string) {
+        this.urlDeletarMinhaSolicitacao = this.solicitacaoUrl + id + "/";
+        return this.http.delete(this.urlDeletarMinhaSolicitacao);
+    }
+
  
 }
