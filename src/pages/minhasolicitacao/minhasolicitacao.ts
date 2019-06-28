@@ -39,6 +39,8 @@ export class MinhaSolicitacaoPage {
 
   public tituloToolBar: string = "Minhas Solicitações";
 
+  public retorno: any;
+
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -55,6 +57,7 @@ export class MinhaSolicitacaoPage {
     this.usuario_cpf = this.usuarioLogado.cpf;
 
   }
+
 
   ionViewWillEnter() {
 
@@ -97,6 +100,32 @@ export class MinhaSolicitacaoPage {
 
   alternarSearchbar() {
     this.mostraSearchbar = !this.mostraSearchbar;
+  }
+
+
+
+
+  removerMinhaSolicitacao(solicitacao: Solicitacao) {
+
+    this.solicitacaoService.deletarMinhaSolicitacao(solicitacao.id).subscribe(
+      response => {
+        this.retorno = response;
+      },
+      error => {
+        console.warn(error);
+      }
+    );
+
+    const indice  = this.solicitacoes.indexOf(solicitacao);
+    this.solicitacoes.splice(indice, 1);
+    
+    let toast = this.toastCtrl.create({
+      message: "Deletada solicitacao feita para " + solicitacao.solicitadoNome,
+      duration: 6000,
+      showCloseButton: true,
+      closeButtonText: "FECHAR"
+    });
+    toast.present();
   }
 
 

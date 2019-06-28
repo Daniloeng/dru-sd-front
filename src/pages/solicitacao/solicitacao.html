@@ -36,14 +36,21 @@
       <h3><b>{{solicitacao.solicitanteNome}}</b></h3>
       <h4>{{solicitacao.solicitanteCpf}}</h4>
       <h4>{{solicitacao.solicitanteEmail}}</h4>
-      <h4>Solicitado em: {{solicitacao.solicitadoEm | date: 'dd/MM/yyyy hh:mm:ss'}}</h4>
-      <span *ngIf="mostraAutorizada"><h4>Autorizada em: <b>{{solicitacao.modificacaoEm | date: 'dd/MM/yyyy hh:mm:ss'}}</b></h4></span>
-      <span *ngIf="mostraNegada"><h4>Negada em: <b>{{solicitacao.modificacaoEm | date: 'dd/MM/yyyy hh:mm:ss'}}</b></h4></span>
+      <h4>Solicitado em: {{solicitacao.solicitadoEm | date: 'dd/MM/yyyy HH:mm:ss'}}</h4>
+      <span *ngIf="mostraAutorizada"><h4>Autorizada em: <b>{{solicitacao.modificacaoEm | date: 'dd/MM/yyyy HH:mm:ss'}}</b></h4></span>
+      <span *ngIf="mostraNegada"><h4>Negada em: <b>{{solicitacao.modificacaoEm | date: 'dd/MM/yyyy HH:mm:ss'}}</b></h4></span>
+
+
 
       <ion-icon padding name="thumbs-up" class="medio" color="secondary" item-right
         (click)="autorizarConsulta(solicitacao)" *ngIf="mostraNova"></ion-icon>
       <ion-icon name="thumbs-down" class="medio" color="danger" item-right (click)="negarConsulta(solicitacao)"
         *ngIf="mostraNova"></ion-icon>
+
+        <ion-icon padding name="trash" class="medio" color="dark" item-right (click)="removerMinhaSolicitacao(solicitacao)" *ngIf="mostraNova"></ion-icon>
+
+        <ion-icon padding name="trash" class="medio" color="danger" item-right (click)="removerMinhaSolicitacao(solicitacao)" *ngIf="mostraAutorizada || mostraNegada"></ion-icon>
+        
 
     </ion-item>
 
