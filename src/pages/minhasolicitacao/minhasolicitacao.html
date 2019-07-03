@@ -17,7 +17,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content no-padding>
 
   <ion-toolbar *ngIf="mostraSearchbar">
     <ion-searchbar [(ngModel)]="termoPesquisa" (ionInput)="filtrarRegistros()" animated="true" placeholder="Pesquisar">
@@ -25,20 +25,24 @@
   </ion-toolbar>
 
 
-  <ion-list no-padding>
+  <ion-list  no-padding>
 
-    <ion-item no-padding *ngFor="let solicitacao of solicitacoes">
+    <ion-item no-padding *ngFor="let solicitacao of solicitacoes" (click)="solicitacao.situacao != 'AUTORIZADA' || visualizar(solicitacao)">
 
-      <ion-icon padding name="help-circle" class="medio" color="cinza-claro" item-left *ngIf="solicitacao.situacao == 'NOVA'"></ion-icon>
-      <ion-icon padding name="thumbs-up" class="medio" color="secondary" item-left *ngIf="solicitacao.situacao == 'AUTORIZADA'"></ion-icon>
-      <ion-icon padding name="thumbs-down" class="medio" color="danger" item-left *ngIf="solicitacao.situacao == 'NEGADA'"></ion-icon>
+          <ion-icon padding name="help-circle" class="medio" color="cinza-claro" item-left
+            *ngIf="solicitacao.situacao == 'NOVA'"></ion-icon>
+          <ion-icon padding name="thumbs-up" class="medio" color="secondary" item-left
+            *ngIf="solicitacao.situacao == 'AUTORIZADA'"></ion-icon>
+          <ion-icon padding name="thumbs-down" class="medio" color="danger" item-left
+            *ngIf="solicitacao.situacao == 'NEGADA'"></ion-icon>
 
-      <h3><b>{{solicitacao.solicitadoNome}}</b></h3>
-      <h4>{{solicitacao.solicitadoCpf}}</h4>
-      <h4>{{solicitacao.solicitadoEmail}}</h4>
-      <h4>Solicitado em: {{solicitacao.solicitadoEm | date: 'dd/MM/yyyy HH:mm:ss'}}</h4>
+          <h3><b>{{solicitacao.solicitadoNome}}</b></h3>
+          <h4>{{solicitacao.solicitadoCpf}}</h4>
+          <h4>{{solicitacao.solicitadoEmail}}</h4>
+          <h4>Solicitado em: {{solicitacao.solicitadoEm | date: 'dd/MM/yyyy HH:mm:ss'}}</h4>
 
-      <ion-icon padding name="trash" class="medio" color="danger" item-right (click)="removerMinhaSolicitacao(solicitacao)"></ion-icon>
+          <ion-icon padding name="trash" class="medio" color="danger" item-right
+            (click)="removerMinhaSolicitacao(solicitacao)"></ion-icon>
 
     </ion-item>
 
