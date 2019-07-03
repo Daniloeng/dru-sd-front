@@ -16,6 +16,7 @@ import { ConsultaPage } from '../pages/consulta/consulta';
 import { ContactPage } from '../pages/contact/contact';
 import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 import { MinhaSolicitacaoPage } from '../pages/minhasolicitacao/minhasolicitacao';
+import { VisualizarPage } from '../pages/visualizar/visualizar';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,7 +38,9 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     ConsultaPage,
     ContactPage,
     SolicitacaoPage,
-    MinhaSolicitacaoPage
+    MinhaSolicitacaoPage,
+    SolicitacaoPage,
+    VisualizarPage
 
   ],
   imports: [
@@ -58,7 +61,8 @@ import { DruServiceProvider } from '../providers/dru-service/dru-service';
     ConsultaPage,
     ContactPage,
     SolicitacaoPage,
-    MinhaSolicitacaoPage
+    MinhaSolicitacaoPage,
+    VisualizarPage
 
   ],
   providers: [

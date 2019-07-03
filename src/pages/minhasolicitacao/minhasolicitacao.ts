@@ -14,6 +14,7 @@ import { ToastController } from 'ionic-angular';
 import { TitleCasePipe } from '@angular/common';
 
 import { Solicitacao } from '../../entity/Solicitacao'
+import { VisualizarPage } from '../visualizar/visualizar';
 
 @Component({
   selector: 'minhasolicitacao-page',
@@ -127,6 +128,20 @@ export class MinhaSolicitacaoPage {
     });
     toast.present();
   }
+
+
+
+  
+  visualizar(solicitacao: Solicitacao) {
+
+    console.log("solicitacao.situacao.toUpperCase()");
+    console.log(solicitacao.situacao.toUpperCase());
+    
+    if ( solicitacao.situacao.toUpperCase() == "AUTORIZADA" ) {
+          this.navCtrl.setRoot(VisualizarPage, {solicitacao: solicitacao});
+    }
+  }
+
 
 
 }

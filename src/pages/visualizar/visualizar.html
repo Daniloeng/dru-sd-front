@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Visualizar DRU
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  
+  <ion-list padding>
+  
+  
+  
+      <ion-item padding>
+  
+          <ion-icon name="person" class="medio" color="primary" item-left></ion-icon>
+      
+          <h2><b>{{usuario_nome}}</b></h2>
+          <h3>{{usuario_cpf}}</h3>
+          <h3>{{usuario_sexo_extenso}}</h3>
+          
+      
+        </ion-item>
+      
+        <ion-item padding>
+  
+            <ion-icon name="mail" class="medio" color="cinza-claro" item-left></ion-icon>
+            <h3>{{usuario_email}}</h3>
+            <h3>{{usuario_telefone}}</h3>
+        
+          </ion-item>
+        
+            
+    <ion-item padding>
+  
+      <ion-icon name="clock" class="medio" color="cinza-claro" item-left></ion-icon>
+  
+      <h3>Solicitado em : {{solicitacaoAtual.solicitadoEm  | date: 'dd/MM/yyyy HH:mm:ss'}}</h3>
+      <h3>Autorizado em : {{solicitacaoAtual.modificacaoEm | date: 'dd/MM/yyyy HH:mm:ss'}}</h3>
+
+    </ion-item>
+  
+         
+    <ion-item padding>
+  
+        <ion-icon name="pin" class="medio" color="cinza-claro" item-left></ion-icon>
+    
+        <h3><b>{{usuario_uf}}</b></h3>
+        <h3>{{usuario_uf_extenso}}</h3>
+        <h3>{{usuario_cidade}}</h3>
+  
+      </ion-item>
+      
+  
+  
+  </ion-list>
+
+
+</ion-content>
